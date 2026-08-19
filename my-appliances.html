@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FixCare - Home Appliance Repair</title>
+
+  <!-- Favicon -->
+
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <!-- Google Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/dash-res.css">
+</head>
+
+<body>
+    <!-- =========================================================
+     CUSTOMER DASHBOARD
+     PART 1: SIDEBAR + HEADER + HERO
+========================================================= -->
+
+<div class="customer-dashboard">
+
+
+    <!-- =====================================================
+         MOBILE SIDEBAR OVERLAY
+    ====================================================== -->
+
+    <div
+        class="customer-sidebar-overlay"
+        id="customerSidebarOverlay">
+    </div>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="customer-sidebar"
+        id="customerSidebar">
+
+
+        <!-- Sidebar Logo -->
+
+        <div class="customer-sidebar-logo">
+
+            <a href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="Appliance Service"
+                >
+
+            </a>
+
+
+            <!-- Mobile Close -->
+
+            <button
+                type="button"
+                class="customer-sidebar-close"
+                id="customerSidebarClose"
+                aria-label="Close menu">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- Sidebar Navigation -->
+
+        <nav class="customer-sidebar-nav">
+
+
+            <a
+                href="dashboard.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-table-columns"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="repair-request.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                <span>
+                    Repair Requests
+                </span>
+
+            </a>
+
+
+            
+
+
+            <a
+                href="track-service.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <span>
+                    Track Service
+                </span>
+
+            </a>
+
+
+            <a
+                href="repair-history.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                <span>
+                    Repair History
+                </span>
+
+            </a>
+
+
+            <a
+                href="invoices.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-file-invoice"></i>
+
+                <span>
+                    Invoices
+                </span>
+
+            </a>
+
+
+            <a
+                href="my-appliances.html"
+                class="customer-nav-link active">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>
+                    My Appliances
+                </span>
+
+            </a>
+
+
+            <a
+                href="support.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-headset"></i>
+
+                <span>
+                    Support
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- Sidebar Bottom -->
+
+<div class="customer-sidebar-bottom">
+
+    <button
+        type="button"
+        class="customer-logout"
+        id="logoutBtn">
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+
+        <span>
+            Logout
+        </span>
+
+    </button>
+
+</div>
+
+    </aside>
+    <!-- =====================================================
+         MAIN DASHBOARD
+    ====================================================== -->
+
+    <main class="customer-dashboard-main">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header class="customer-dashboard-header">
+
+
+            <!-- Hamburger -->
+
+            <button
+                type="button"
+                class="customer-menu-toggle"
+                id="customerMenuToggle"
+                aria-label="Open menu"
+                aria-expanded="false">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- Header Title -->
+
+            <div class="customer-header-title">
+
+                <span>
+                    Customer Service Portal
+                </span>
+
+                <h1>
+                    Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- Header Actions -->
+
+            <div class="customer-header-actions">
+
+
+                <!-- Notification -->
+
+                <button
+                    type="button"
+                    class="customer-header-btn customer-notification-btn"
+                    aria-label="Notifications">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="customer-notification-count">
+                        3
+                    </span>
+
+                </button>
+
+
+                <!-- Settings -->
+
+                <a
+                    href="settings.html"
+                    class="customer-header-btn"
+                    aria-label="Settings">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </a>
+
+
+                <!-- Dark Mode -->
+
+                <button
+                    type="button"
+                    class="customer-header-btn theme-toggle"
+                    id="themeToggle"
+                    aria-label="Toggle dark mode">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+
+                <!-- RTL -->
+
+                <button
+                    type="button"
+                    class="customer-header-btn rtl-toggle"
+                    id="rtlToggle"
+                    aria-label="Toggle RTL">
+
+                    <i class="fa-solid fa-right-left"></i>
+
+                </button>
+
+
+                <!-- Customer Profile -->
+
+                <a
+                    href="profile.html"
+                    class="customer-profile">
+
+
+                    <div class="customer-profile-image">
+
+                        <img
+                            src="images/profile.jpg"
+                            alt="Customer">
+
+                    </div>
+
+
+                    <div class="customer-profile-info">
+
+                        <strong>
+                            Jack
+                        </strong>
+
+                        <span>
+                            Service Account
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </header>
+<!-- =========================================================
+     MY APPLIANCES PAGE
+     PART 1 - HTML ONLY
+     SECTION ONLY
+========================================================= -->
+
+<main class="my-appliances-page">
+
+
+    <!-- =====================================================
+         PAGE HEADER
+    ====================================================== -->
+
+    <section class="my-appliances-header">
+
+        <div class="my-appliances-header-content">
+
+            <span class="my-appliances-label">
+                APPLIANCE MANAGEMENT
+            </span>
+
+            <h2>
+                My Appliances
+            </h2>
+
+            <p>
+                Manage your registered appliances and view
+                their service information.
+            </p>
+
+        </div>
+
+
+        <!-- Breadcrumb -->
+
+        <div class="my-appliances-breadcrumb">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+            <span>
+                My Appliances
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MAIN APPLIANCES SECTION
+    ====================================================== -->
+
+    <section class="my-appliances-section">
+
+        <div class="my-appliances-container">
+
+
+            <!-- =================================================
+                 SUMMARY CARDS
+            ================================================== -->
+
+            <div class="appliance-summary">
+
+
+                <!-- Total Appliances -->
+
+                <div class="appliance-summary-card">
+
+                    <div class="appliance-summary-icon">
+
+                        <i class="fa-solid fa-house"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            TOTAL APPLIANCES
+                        </span>
+
+                        <strong>
+                            4
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Active Appliances -->
+
+                <div class="appliance-summary-card">
+
+                    <div class="appliance-summary-icon active">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            ACTIVE
+                        </span>
+
+                        <strong>
+                            4
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Recently Serviced -->
+
+                <div class="appliance-summary-card">
+
+                    <div class="appliance-summary-icon service">
+
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            RECENTLY SERVICED
+                        </span>
+
+                        <strong>
+                            2
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Need Service -->
+
+                <div class="appliance-summary-card">
+
+                    <div class="appliance-summary-icon warning">
+
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            NEED SERVICE
+                        </span>
+
+                        <strong>
+                            1
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 APPLIANCE TOOLBAR
+            ================================================== -->
+
+            <div class="appliance-toolbar">
+
+
+                <div class="appliance-toolbar-title">
+
+                    <span>
+                        REGISTERED APPLIANCES
+                    </span>
+
+                    <h3>
+                        Your Appliances
+                    </h3>
+
+                </div>
+
+
+                <div class="appliance-toolbar-actions">
+
+                    <!-- Search -->
+
+                    <div class="appliance-search">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="text"
+                            id="appliance-search"
+                            placeholder="Search appliance..."
+                        >
+
+                    </div>
+
+
+                    <!-- Filter -->
+
+                    <div class="appliance-filter">
+
+                        <select id="appliance-filter">
+
+                            <option value="all">
+                                All Appliances
+                            </option>
+
+                            <option value="active">
+                                Active
+                            </option>
+
+                            <option value="service">
+                                Recently Serviced
+                            </option>
+
+                            <option value="attention">
+                                Need Service
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Add Appliance -->
+
+                    <a
+                        href="#"
+                        class="add-appliance-btn">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Add Appliance
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 APPLIANCE GRID
+            ================================================== -->
+
+            <div class="appliance-grid">
+
+
+                <!-- =================================================
+                     AIR CONDITIONER
+                ================================================== -->
+
+                <article class="appliance-card">
+
+                    <div class="appliance-card-top">
+
+                        <div class="appliance-card-icon ac">
+
+                            <i class="fa-solid fa-snowflake"></i>
+
+                        </div>
+
+                        <span class="appliance-status active">
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            Active
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="appliance-card-content">
+
+                        <span class="appliance-type">
+                            AIR CONDITIONER
+                        </span>
+
+                        <h4>
+                            Split AC
+                        </h4>
+
+                        <p>
+                            Voltas 1.5 Ton
+                        </p>
+
+                    </div>
+
+
+                    <div class="appliance-card-details">
+
+                        <div>
+
+                            <span>
+                                MODEL
+                            </span>
+
+                            <strong>
+                                183V EY
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                PURCHASED
+                            </span>
+
+                            <strong>
+                                Jun 2024
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="appliance-card-service">
+
+                        <div>
+
+                            <span>
+                                LAST SERVICE
+                            </span>
+
+                            <strong>
+                                18 Aug 2026
+                            </strong>
+
+                        </div>
+
+                        <span class="service-status completed">
+                            Serviced
+                        </span>
+
+                    </div>
+
+
+                    <div class="appliance-card-actions">
+
+                        <a
+                            href="#"
+                            class="appliance-view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            View Details
+
+                        </a>
+
+                        <a
+                            href="repair-request.html"
+                            class="appliance-service-btn">
+
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                            Request Service
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     WASHING MACHINE
+                ================================================== -->
+
+                <article class="appliance-card">
+
+                    <div class="appliance-card-top">
+
+                        <div class="appliance-card-icon washing">
+
+                            <i class="fa-solid fa-shirt"></i>
+
+                        </div>
+
+                        <span class="appliance-status active">
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            Active
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="appliance-card-content">
+
+                        <span class="appliance-type">
+                            WASHING MACHINE
+                        </span>
+
+                        <h4>
+                            Front Load Washer
+                        </h4>
+
+                        <p>
+                            LG 8 KG
+                        </p>
+
+                    </div>
+
+
+                    <div class="appliance-card-details">
+
+                        <div>
+
+                            <span>
+                                MODEL
+                            </span>
+
+                            <strong>
+                                FHM1208
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                PURCHASED
+                            </span>
+
+                            <strong>
+                                Mar 2023
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="appliance-card-service">
+
+                        <div>
+
+                            <span>
+                                LAST SERVICE
+                            </span>
+
+                            <strong>
+                                02 Aug 2026
+                            </strong>
+
+                        </div>
+
+                        <span class="service-status completed">
+                            Serviced
+                        </span>
+
+                    </div>
+
+
+                    <div class="appliance-card-actions">
+
+                        <a
+                            href="#"
+                            class="appliance-view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            View Details
+
+                        </a>
+
+                        <a
+                            href="repair-request.html"
+                            class="appliance-service-btn">
+
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                            Request Service
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     TELEVISION
+                ================================================== -->
+
+                <article class="appliance-card">
+
+                    <div class="appliance-card-top">
+
+                        <div class="appliance-card-icon tv">
+
+                            <i class="fa-solid fa-tv"></i>
+
+                        </div>
+
+                        <span class="appliance-status active">
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            Active
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="appliance-card-content">
+
+                        <span class="appliance-type">
+                            TELEVISION
+                        </span>
+
+                        <h4>
+                            Smart LED TV
+                        </h4>
+
+                        <p>
+                            Samsung 55 Inch
+                        </p>
+
+                    </div>
+
+
+                    <div class="appliance-card-details">
+
+                        <div>
+
+                            <span>
+                                MODEL
+                            </span>
+
+                            <strong>
+                                UA55DU7700
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                PURCHASED
+                            </span>
+
+                            <strong>
+                                Jan 2025
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="appliance-card-service">
+
+                        <div>
+
+                            <span>
+                                LAST SERVICE
+                            </span>
+
+                            <strong>
+                                21 Jul 2026
+                            </strong>
+
+                        </div>
+
+                        <span class="service-status completed">
+                            Serviced
+                        </span>
+
+                    </div>
+
+
+                    <div class="appliance-card-actions">
+
+                        <a
+                            href="#"
+                            class="appliance-view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            View Details
+
+                        </a>
+
+                        <a
+                            href="repair-request.html"
+                            class="appliance-service-btn">
+
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                            Request Service
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     REFRIGERATOR
+                ================================================== -->
+
+                <article class="appliance-card needs-service">
+
+                    <div class="appliance-card-top">
+
+                        <div class="appliance-card-icon refrigerator">
+
+                            <i class="fa-solid fa-temperature-low"></i>
+
+                        </div>
+
+                        <span class="appliance-status attention">
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            Service Due
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="appliance-card-content">
+
+                        <span class="appliance-type">
+                            REFRIGERATOR
+                        </span>
+
+                        <h4>
+                            Double Door Refrigerator
+                        </h4>
+
+                        <p>
+                            Samsung 415 L
+                        </p>
+
+                    </div>
+
+
+                    <div class="appliance-card-details">
+
+                        <div>
+
+                            <span>
+                                MODEL
+                            </span>
+
+                            <strong>
+                                RT42CG6644
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                PURCHASED
+                            </span>
+
+                            <strong>
+                                Aug 2022
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="appliance-card-service">
+
+                        <div>
+
+                            <span>
+                                LAST SERVICE
+                            </span>
+
+                            <strong>
+                                12 Jan 2026
+                            </strong>
+
+                        </div>
+
+                        <span class="service-status due">
+                            Service Due
+                        </span>
+
+                    </div>
+
+
+                    <div class="appliance-card-actions">
+
+                        <a
+                            href="#"
+                            class="appliance-view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            View Details
+
+                        </a>
+
+                        <a
+                            href="repair-request.html"
+                            class="appliance-service-btn">
+
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                            Request Service
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+<!-- =========================================================
+     APPLIANCE SERVICE OVERVIEW
+     PART 1 - HTML ONLY
+     SECTION ONLY
+========================================================= -->
+
+<section class="appliance-service-overview">
+
+    <div class="appliance-service-container">
+
+
+        <!-- =================================================
+             SECTION HEADER
+        ================================================== -->
+
+        <div class="appliance-service-header">
+
+            <div>
+
+                <span class="appliance-service-label">
+                    SERVICE OVERVIEW
+                </span>
+
+                <h3>
+                    Appliance Service Overview
+                </h3>
+
+                <p>
+                    Keep track of your appliance maintenance,
+                    service dates, and repair expenses.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SERVICE SUMMARY CARDS
+        ================================================== -->
+
+        <div class="appliance-service-summary">
+
+
+            <!-- Total Services -->
+
+            <div class="appliance-service-summary-card">
+
+                <div class="appliance-service-summary-icon total">
+
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        TOTAL SERVICES
+                    </span>
+
+                    <strong>
+                        12
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Last Service -->
+
+            <div class="appliance-service-summary-card">
+
+                <div class="appliance-service-summary-icon last">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        LAST SERVICE
+                    </span>
+
+                    <strong>
+                        18 Aug 2026
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Next Service -->
+
+            <div class="appliance-service-summary-card">
+
+                <div class="appliance-service-summary-icon next">
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        NEXT RECOMMENDED SERVICE
+                    </span>
+
+                    <strong>
+                        Sep 2026
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Service Cost -->
+
+            <div class="appliance-service-summary-card">
+
+                <div class="appliance-service-summary-icon cost">
+
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        TOTAL SERVICE COST
+                    </span>
+
+                    <strong>
+                        ₹8,450
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             SERVICE HISTORY
+        ================================================== -->
+
+        <div class="appliance-service-history">
+
+
+            <!-- History Header -->
+
+            <div class="appliance-service-history-header">
+
+                <div>
+
+                    <span>
+                        RECENT ACTIVITY
+                    </span>
+
+                    <h4>
+                        Recent Service History
+                    </h4>
+
+                </div>
+
+                <a href="repair-history.html">
+                    View All
+                </a>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SERVICE ITEM 1
+            ================================================== -->
+
+            <div class="appliance-service-history-item">
+
+                <div class="appliance-service-history-icon ac">
+
+                    <i class="fa-solid fa-snowflake"></i>
+
+                </div>
+
+                <div class="appliance-service-history-info">
+
+                    <span>
+                        AIR CONDITIONER
+                    </span>
+
+                    <strong>
+                        General AC Service
+                    </strong>
+
+                    <small>
+                        18 Aug 2026
+                    </small>
+
+                </div>
+
+                <div class="appliance-service-history-amount">
+
+                    <span>
+                        AMOUNT
+                    </span>
+
+                    <strong>
+                        ₹1,850
+                    </strong>
+
+                </div>
+
+                <span class="appliance-service-history-status completed">
+                    Completed
+                </span>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SERVICE ITEM 2
+            ================================================== -->
+
+            <div class="appliance-service-history-item">
+
+                <div class="appliance-service-history-icon washing">
+
+                    <i class="fa-solid fa-shirt"></i>
+
+                </div>
+
+                <div class="appliance-service-history-info">
+
+                    <span>
+                        WASHING MACHINE
+                    </span>
+
+                    <strong>
+                        Drum & Motor Repair
+                    </strong>
+
+                    <small>
+                        02 Aug 2026
+                    </small>
+
+                </div>
+
+                <div class="appliance-service-history-amount">
+
+                    <span>
+                        AMOUNT
+                    </span>
+
+                    <strong>
+                        ₹950
+                    </strong>
+
+                </div>
+
+                <span class="appliance-service-history-status completed">
+                    Completed
+                </span>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SERVICE ITEM 3
+            ================================================== -->
+
+            <div class="appliance-service-history-item">
+
+                <div class="appliance-service-history-icon tv">
+
+                    <i class="fa-solid fa-tv"></i>
+
+                </div>
+
+                <div class="appliance-service-history-info">
+
+                    <span>
+                        TELEVISION
+                    </span>
+
+                    <strong>
+                        Display Panel Repair
+                    </strong>
+
+                    <small>
+                        21 Jul 2026
+                    </small>
+
+                </div>
+
+                <div class="appliance-service-history-amount">
+
+                    <span>
+                        AMOUNT
+                    </span>
+
+                    <strong>
+                        ₹2,400
+                    </strong>
+
+                </div>
+
+                <span class="appliance-service-history-status completed">
+                    Completed
+                </span>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SERVICE ITEM 4
+            ================================================== -->
+
+            <div class="appliance-service-history-item">
+
+                <div class="appliance-service-history-icon refrigerator">
+
+                    <i class="fa-solid fa-temperature-low"></i>
+
+                </div>
+
+                <div class="appliance-service-history-info">
+
+                    <span>
+                        REFRIGERATOR
+                    </span>
+
+                    <strong>
+                        Routine Maintenance
+                    </strong>
+
+                    <small>
+                        12 Jan 2026
+                    </small>
+
+                </div>
+
+                <div class="appliance-service-history-amount">
+
+                    <span>
+                        AMOUNT
+                    </span>
+
+                    <strong>
+                        ₹1,250
+                    </strong>
+
+                </div>
+
+                <span class="appliance-service-history-status pending">
+                    Service Due
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+
+
+</main>
+
+</div>
+ <!-- JS -->
+<!-- =========================================================
+     LOGOUT CONFIRMATION POPUP
+========================================================= -->
+
+<div class="logout-modal-overlay" id="logoutModal">
+
+    <div class="logout-modal">
+
+        <!-- Icon -->
+        <div class="logout-modal-icon">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+
+        <!-- Message -->
+        <h2>
+            Are you sure you want to<br>
+            logout?
+        </h2>
+
+        <!-- Buttons -->
+        <div class="logout-modal-actions">
+
+            <button
+                type="button"
+                class="logout-confirm-btn"
+                id="logoutConfirm">
+                Yes
+            </button>
+
+            <button
+                type="button"
+                class="logout-cancel-btn"
+                id="logoutCancel">
+                No
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+  <script src="js/dash.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FixCare - Home Appliance Repair</title>
+
+  <!-- Favicon -->
+
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <!-- Google Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/dash-res.css">
+</head>
+
+<body>
+    <!-- =========================================================
+     CUSTOMER DASHBOARD
+     PART 1: SIDEBAR + HEADER + HERO
+========================================================= -->
+
+<div class="customer-dashboard">
+
+
+    <!-- =====================================================
+         MOBILE SIDEBAR OVERLAY
+    ====================================================== -->
+
+    <div
+        class="customer-sidebar-overlay"
+        id="customerSidebarOverlay">
+    </div>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="customer-sidebar"
+        id="customerSidebar">
+
+
+        <!-- Sidebar Logo -->
+
+        <div class="customer-sidebar-logo">
+
+            <a href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="Appliance Service"
+                >
+
+            </a>
+
+
+            <!-- Mobile Close -->
+
+            <button
+                type="button"
+                class="customer-sidebar-close"
+                id="customerSidebarClose"
+                aria-label="Close menu">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- Sidebar Navigation -->
+
+        <nav class="customer-sidebar-nav">
+
+
+            <a
+                href="dashboard.html"
+                class="customer-nav-link active">
+
+                <i class="fa-solid fa-table-columns"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="repair-request.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                <span>
+                    Repair Requests
+                </span>
+
+            </a>
+
+
+            
+
+
+            <a
+                href="track-service.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <span>
+                    Track Service
+                </span>
+
+            </a>
+
+
+            <a
+                href="repair-history.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                <span>
+                    Repair History
+                </span>
+
+            </a>
+
+
+            <a
+                href="invoices.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-file-invoice"></i>
+
+                <span>
+                    Invoices
+                </span>
+
+            </a>
+
+
+            <a
+                href="my-appliances.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>
+                    My Appliances
+                </span>
+
+            </a>
+
+
+            <a
+                href="support.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-headset"></i>
+
+                <span>
+                    Support
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- Sidebar Bottom -->
+
+<div class="customer-sidebar-bottom">
+
+    <button
+        type="button"
+        class="customer-logout"
+        id="logoutBtn">
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+
+        <span>
+            Logout
+        </span>
+
+    </button>
+
+</div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN DASHBOARD
+    ====================================================== -->
+
+    <main class="customer-dashboard-main">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header class="customer-dashboard-header">
+
+
+            <!-- Hamburger -->
+
+            <button
+                type="button"
+                class="customer-menu-toggle"
+                id="customerMenuToggle"
+                aria-label="Open menu"
+                aria-expanded="false">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- Header Title -->
+
+            <div class="customer-header-title">
+
+                <span>
+                    Customer Service Portal
+                </span>
+
+                <h1>
+                    Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- Header Actions -->
+
+            <div class="customer-header-actions">
+
+
+                <!-- Notification -->
+
+                <button
+                    type="button"
+                    class="customer-header-btn customer-notification-btn"
+                    aria-label="Notifications">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="customer-notification-count">
+                        3
+                    </span>
+
+                </button>
+
+
+                <!-- Settings -->
+
+                <a
+                    href="settings.html"
+                    class="customer-header-btn"
+                    aria-label="Settings">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </a>
+
+
+                <!-- Dark Mode -->
+
+                <button
+                    type="button"
+                    class="customer-header-btn theme-toggle"
+                    id="themeToggle"
+                    aria-label="Toggle dark mode">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+
+                <!-- RTL -->
+
+                <button
+                    type="button"
+                    class="customer-header-btn rtl-toggle"
+                    id="rtlToggle"
+                    aria-label="Toggle RTL">
+
+                    <i class="fa-solid fa-right-left"></i>
+
+                </button>
+
+
+                <!-- Customer Profile -->
+
+                <a
+                    href="profile.html"
+                    class="customer-profile">
+
+
+                    <div class="customer-profile-image">
+
+                        <img
+                            src="images/profile.jpg"
+                            alt="Customer">
+
+                    </div>
+
+
+                    <div class="customer-profile-info">
+
+                        <strong>
+                            Jack
+                        </strong>
+
+                        <span>
+                            Service Account
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             HERO / WELCOME SECTION
+        ================================================== -->
+
+        <section class="customer-dashboard-hero">
+
+
+            <!-- Hero Content -->
+
+            <div class="customer-hero-content">
+
+
+                <span class="customer-hero-label">
+                    Customer Service Portal
+                </span>
+
+
+                <h2>
+                    Manage Your Appliance
+                    <span>Repairs With Ease.</span>
+                </h2>
+
+
+                <p>
+                    Submit repair requests, track technician
+                    assignments and arrival status, and view
+                    your complete repair history and invoices
+                    from one convenient dashboard.
+                </p>
+
+
+                <!-- Hero Actions -->
+
+                <div class="customer-hero-actions">
+
+
+                    <a
+                        href="repair-request.html"
+                        class="customer-hero-primary">
+
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                        Submit Repair Request
+
+                    </a>
+
+
+                    <a
+                        href="track-service.html"
+                        class="customer-hero-secondary">
+
+                        <i class="fa-solid fa-location-crosshairs"></i>
+
+                        Track My Service
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hero Visual -->
+
+            <div class="customer-hero-visual">
+
+
+                <div class="customer-hero-image">
+
+                    <img
+                        src="images/dashboard-appliances.jpg"
+                        alt="Appliance repair service">
+
+                </div>
+
+
+                <!-- Technician Card -->
+
+                <div
+                    class="customer-hero-status customer-status-top">
+
+                    <span>
+                        Technician Assigned
+                    </span>
+
+                    <strong>
+                        Arun Kumar
+                    </strong>
+
+                </div>
+
+
+                <!-- Arrival Card -->
+
+                <div
+                    class="customer-hero-status customer-status-bottom">
+
+                    <span>
+                        Arrival Status
+                    </span>
+
+                    <strong>
+                        Arriving in 25 mins
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SERVICE OVERVIEW HEADING
+        ================================================== -->
+
+        <div class="customer-overview-heading">
+
+            <div>
+
+                <h2>
+                    Service Overview
+                </h2>
+
+                <p>
+                    Your appliance service activity at a glance
+                </p>
+
+            </div>
+
+
+            <a
+                href="repair-history.html"
+                class="customer-view-link">
+
+                View History
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <!-- =========================================================
+     SERVICE OVERVIEW
+     PART 4 - PART 1: HTML
+========================================================= -->
+
+
+<section class="customer-service-overview">
+
+
+    <!-- =====================================================
+         OVERVIEW CARDS
+    ====================================================== -->
+
+    <div class="customer-service-cards">
+
+
+        <!-- =================================================
+             ACTIVE REPAIR
+        ================================================== -->
+
+        <div class="customer-service-card">
+
+            <div class="customer-service-card-top">
+
+                <div class="customer-service-card-icon repair-icon">
+
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                </div>
+
+                <span class="customer-service-card-status active">
+                    Active
+                </span>
+
+            </div>
+
+
+            <div class="customer-service-card-content">
+
+                <span>
+                    Active Repair
+                </span>
+
+                <h3>
+                    01
+                </h3>
+
+                <p>
+                    AC Not Cooling
+                </p>
+
+            </div>
+
+
+            <a
+                href="track-service.html"
+                class="customer-service-card-link">
+
+                View Details
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <!-- =================================================
+             TECHNICIAN ASSIGNED
+        ================================================== -->
+
+        <div class="customer-service-card">
+
+            <div class="customer-service-card-top">
+
+                <div class="customer-service-card-icon technician-icon">
+
+                    <i class="fa-solid fa-user-gear"></i>
+
+                </div>
+
+                <span class="customer-service-card-status assigned">
+                    Assigned
+                </span>
+
+            </div>
+
+
+            <div class="customer-service-card-content">
+
+                <span>
+                    Technician Assigned
+                </span>
+
+                <h3>
+                    Arun Kumar
+                </h3>
+
+                <p>
+                    Appliance Technician
+                </p>
+
+            </div>
+
+
+            <a
+                href="track-service.html"
+                class="customer-service-card-link">
+
+                View Technician
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <!-- =================================================
+             ARRIVAL STATUS
+        ================================================== -->
+
+        <div class="customer-service-card">
+
+            <div class="customer-service-card-top">
+
+                <div class="customer-service-card-icon arrival-icon">
+
+                    <i class="fa-solid fa-location-crosshairs"></i>
+
+                </div>
+
+                <span class="customer-service-card-status on-way">
+                    On The Way
+                </span>
+
+            </div>
+
+
+            <div class="customer-service-card-content">
+
+                <span>
+                    Arrival Status
+                </span>
+
+                <h3>
+                    25 min
+                </h3>
+
+                <p>
+                    Estimated arrival
+                </p>
+
+            </div>
+
+
+            <a
+                href="track-service.html"
+                class="customer-service-card-link">
+
+                Track Technician
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <!-- =================================================
+             REPAIR HISTORY
+        ================================================== -->
+
+        <div class="customer-service-card">
+
+            <div class="customer-service-card-top">
+
+                <div class="customer-service-card-icon history-icon">
+
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+
+                </div>
+
+                <span class="customer-service-card-status completed">
+                    Completed
+                </span>
+
+            </div>
+
+
+            <div class="customer-service-card-content">
+
+                <span>
+                    Repair History
+                </span>
+
+                <h3>
+                    08
+                </h3>
+
+                <p>
+                    Completed services
+                </p>
+
+            </div>
+
+
+            <a
+                href="repair-history.html"
+                class="customer-service-card-link">
+
+                View History
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         CURRENT REPAIR STATUS
+    ====================================================== -->
+
+    <div class="customer-current-repair">
+
+
+        <!-- Section Header -->
+
+        <div class="customer-current-repair-header">
+
+            <div>
+
+                <span class="customer-section-label">
+                    CURRENT SERVICE
+                </span>
+
+                <h2>
+                    Current Repair Status
+                </h2>
+
+                <p>
+                    Track your active repair request and technician.
+                </p>
+
+            </div>
+
+
+            <a
+                href="track-service.html"
+                class="customer-track-link">
+
+                Track Service
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <!-- =================================================
+             REPAIR INFORMATION
+        ================================================== -->
+
+        <div class="customer-current-repair-content">
+
+
+            <!-- Repair Details -->
+
+            <div class="customer-repair-details">
+
+
+                <div class="customer-repair-title">
+
+                    <div class="customer-repair-icon">
+
+                        <i class="fa-solid fa-snowflake"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Repair Request #SR1024
+                        </span>
+
+                        <h3>
+                            AC Not Cooling
+                        </h3>
+
+                        <p>
+                            Samsung Split Air Conditioner
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Technician -->
+
+                <div class="customer-technician-info">
+
+                    <div class="customer-technician-image">
+
+                        <img
+                            src="images/technician.jpg"
+                            alt="Assigned technician">
+
+                    </div>
+
+
+                    <div class="customer-technician-content">
+
+                        <span>
+                            Assigned Technician
+                        </span>
+
+                        <strong>
+                            Arun Kumar
+                        </strong>
+
+                        <small>
+                            Appliance Repair Specialist
+                        </small>
+
+                    </div>
+
+
+                    <a
+                        href="track-service.html"
+                        class="customer-call-technician"
+                        aria-label="Contact technician">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SERVICE PROGRESS
+            ================================================== -->
+
+            <div class="customer-service-progress">
+
+
+                <div class="customer-progress-heading">
+
+                    <span>
+                        Service Progress
+                    </span>
+
+                    <strong>
+                        75%
+                    </strong>
+
+                </div>
+
+
+                <div class="customer-progress-bar">
+
+                    <span
+                        class="customer-progress-fill">
+                    </span>
+
+                </div>
+
+
+                <!-- Progress Steps -->
+
+                <div class="customer-progress-steps">
+
+
+                    <!-- Step 1 -->
+
+                    <div class="customer-progress-step completed">
+
+                        <div class="customer-step-icon">
+
+                            <i class="fa-solid fa-check"></i>
+
+                        </div>
+
+                        <span>
+                            Request<br>
+                            Submitted
+                        </span>
+
+                    </div>
+
+
+                    <!-- Step 2 -->
+
+                    <div class="customer-progress-step completed">
+
+                        <div class="customer-step-icon">
+
+                            <i class="fa-solid fa-check"></i>
+
+                        </div>
+
+                        <span>
+                            Technician<br>
+                            Assigned
+                        </span>
+
+                    </div>
+
+
+                    <!-- Step 3 -->
+
+                    <div class="customer-progress-step active">
+
+                        <div class="customer-step-icon">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+                        <span>
+                            Technician<br>
+                            On The Way
+                        </span>
+
+                    </div>
+
+
+                    <!-- Step 4 -->
+
+                    <div class="customer-progress-step">
+
+                        <div class="customer-step-icon">
+
+                            <i class="fa-solid fa-wrench"></i>
+
+                        </div>
+
+                        <span>
+                            Service<br>
+                            Complete
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- Arrival Information -->
+
+                <div class="customer-arrival-info">
+
+                    <div>
+
+                        <span>
+                            Estimated Arrival
+                        </span>
+
+                        <strong>
+                            Today, 10:30 AM
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Current Status
+                        </span>
+
+                        <strong class="arrival-highlight">
+                            Technician is on the way
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================================================
+     RECENT REPAIR HISTORY + INVOICES
+     PART 5 - PART 1: HTML
+========================================================= -->
+
+<section class="customer-history-section">
+
+
+    <!-- =====================================================
+         SECTION HEADER
+    ====================================================== -->
+
+    <div class="customer-history-header">
+
+        <div>
+
+            <span class="customer-section-label">
+                SERVICE HISTORY
+            </span>
+
+            <h2>
+                Recent Repair History
+            </h2>
+
+            <p>
+                View your previous appliance services and invoices.
+            </p>
+
+        </div>
+
+
+        <a
+            href="repair-history.html"
+            class="customer-history-view-all">
+
+            View All History
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         HISTORY + INVOICE GRID
+    ====================================================== -->
+
+    <div class="customer-history-grid">
+
+
+        <!-- =================================================
+             REPAIR HISTORY
+        ================================================== -->
+
+        <div class="customer-history-card">
+
+
+            <div class="customer-history-card-header">
+
+                <div>
+
+                    <h3>
+                        Previous Repairs
+                    </h3>
+
+                    <span>
+                        Your latest completed services
+                    </span>
+
+                </div>
+
+
+                <div class="customer-history-icon">
+
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 REPAIR ITEM 1
+            ================================================== -->
+
+            <div class="customer-repair-history-item">
+
+
+                <div class="customer-repair-history-icon washing-icon">
+
+                    <i class="fa-solid fa-shirt"></i>
+
+                </div>
+
+
+                <div class="customer-repair-history-info">
+
+                    <span>
+                        #SR1023
+                    </span>
+
+                    <h4>
+                        Washing Machine Repair
+                    </h4>
+
+                    <p>
+                        12 Aug 2026 · Ravi Kumar
+                    </p>
+
+                </div>
+
+
+                <div class="customer-repair-history-right">
+
+                    <span class="customer-history-status completed">
+                        Completed
+                    </span>
+
+                    <strong>
+                        ₹1,850
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 REPAIR ITEM 2
+            ================================================== -->
+
+            <div class="customer-repair-history-item">
+
+
+                <div class="customer-repair-history-icon refrigerator-icon">
+
+                    <i class="fa-solid fa-temperature-low"></i>
+
+                </div>
+
+
+                <div class="customer-repair-history-info">
+
+                    <span>
+                        #SR1018
+                    </span>
+
+                    <h4>
+                        Refrigerator Repair
+                    </h4>
+
+                    <p>
+                        05 Aug 2026 · Arun Kumar
+                    </p>
+
+                </div>
+
+
+                <div class="customer-repair-history-right">
+
+                    <span class="customer-history-status completed">
+                        Completed
+                    </span>
+
+                    <strong>
+                        ₹1,250
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 REPAIR ITEM 3
+            ================================================== -->
+
+            <div class="customer-repair-history-item">
+
+
+                <div class="customer-repair-history-icon microwave-icon">
+
+                    <i class="fa-solid fa-fire-burner"></i>
+
+                </div>
+
+
+                <div class="customer-repair-history-info">
+
+                    <span>
+                        #SR1009
+                    </span>
+
+                    <h4>
+                        Microwave Repair
+                    </h4>
+
+                    <p>
+                        28 Jul 2026 · Vijay Kumar
+                    </p>
+
+                </div>
+
+
+                <div class="customer-repair-history-right">
+
+                    <span class="customer-history-status completed">
+                        Completed
+                    </span>
+
+                    <strong>
+                        ₹950
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 HISTORY FOOTER
+            ================================================== -->
+
+            <div class="customer-history-card-footer">
+
+                <a
+                    href="repair-history.html">
+
+                    View Complete Repair History
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             INVOICES
+        ================================================== -->
+
+        <div class="customer-invoice-card">
+
+
+            <div class="customer-invoice-header">
+
+                <div>
+
+                    <span class="customer-section-label">
+                        BILLING
+                    </span>
+
+                    <h3>
+                        Recent Invoices
+                    </h3>
+
+                    <p>
+                        Your latest service invoices
+                    </p>
+
+                </div>
+
+
+                <div class="customer-invoice-icon">
+
+                    <i class="fa-solid fa-file-invoice"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 INVOICE 1
+            ================================================== -->
+
+            <div class="customer-invoice-item">
+
+                <div class="customer-invoice-item-icon">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                </div>
+
+
+                <div class="customer-invoice-info">
+
+                    <span>
+                        Invoice #INV1023
+                    </span>
+
+                    <p>
+                        12 Aug 2026
+                    </p>
+
+                </div>
+
+
+                <div class="customer-invoice-amount">
+
+                    <strong>
+                        ₹1,850
+                    </strong>
+
+                    <span class="paid">
+                        Paid
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="#"
+                    class="customer-invoice-action"
+                    aria-label="View invoice">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 INVOICE 2
+            ================================================== -->
+
+            <div class="customer-invoice-item">
+
+                <div class="customer-invoice-item-icon">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                </div>
+
+
+                <div class="customer-invoice-info">
+
+                    <span>
+                        Invoice #INV1018
+                    </span>
+
+                    <p>
+                        05 Aug 2026
+                    </p>
+
+                </div>
+
+
+                <div class="customer-invoice-amount">
+
+                    <strong>
+                        ₹1,250
+                    </strong>
+
+                    <span class="paid">
+                        Paid
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="#"
+                    class="customer-invoice-action"
+                    aria-label="View invoice">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 INVOICE 3
+            ================================================== -->
+
+            <div class="customer-invoice-item">
+
+                <div class="customer-invoice-item-icon">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                </div>
+
+
+                <div class="customer-invoice-info">
+
+                    <span>
+                        Invoice #INV1009
+                    </span>
+
+                    <p>
+                        28 Jul 2026
+                    </p>
+
+                </div>
+
+
+                <div class="customer-invoice-amount">
+
+                    <strong>
+                        ₹950
+                    </strong>
+
+                    <span class="paid">
+                        Paid
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="#"
+                    class="customer-invoice-action"
+                    aria-label="View invoice">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 INVOICE FOOTER
+            ================================================== -->
+
+            <div class="customer-invoice-footer">
+
+                <a href="invoices.html">
+
+                    View All Invoices
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+<!-- =========================================================
+     QUICK ACTIONS / BOOK NEW SERVICE
+     PART 6 - PART 1: HTML
+========================================================= -->
+
+<section class="customer-quick-actions">
+
+
+    <!-- =====================================================
+         SECTION HEADER
+    ====================================================== -->
+
+    <div class="customer-quick-actions-header">
+
+        <div>
+
+            <span class="customer-section-label">
+                QUICK ACTIONS
+            </span>
+
+            <h2>
+                What would you like to do?
+            </h2>
+
+            <p>
+                Manage your appliance services quickly from here.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         QUICK ACTIONS GRID
+    ====================================================== -->
+
+    <div class="customer-quick-actions-grid">
+
+
+        <!-- =================================================
+             BOOK NEW SERVICE
+        ================================================== -->
+
+        <a
+            href="booking.html"
+            class="customer-quick-action-card customer-quick-action-primary">
+
+            <div class="customer-quick-action-icon">
+
+                <i class="fa-solid fa-calendar-plus"></i>
+
+            </div>
+
+
+            <div class="customer-quick-action-content">
+
+                <h3>
+                    Book a New Service
+                </h3>
+
+                <p>
+                    Schedule a technician for your appliance repair.
+                </p>
+
+            </div>
+
+
+            <div class="customer-quick-action-arrow">
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- =================================================
+             TRACK TECHNICIAN
+        ================================================== -->
+
+        <a
+            href="track-service.html"
+            class="customer-quick-action-card">
+
+            <div class="customer-quick-action-icon">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+            </div>
+
+
+            <div class="customer-quick-action-content">
+
+                <h3>
+                    Track Technician
+                </h3>
+
+                <p>
+                    Check technician location and arrival status.
+                </p>
+
+            </div>
+
+
+            <div class="customer-quick-action-arrow">
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- =================================================
+             REPAIR HISTORY
+        ================================================== -->
+
+        <a
+            href="repair-history.html"
+            class="customer-quick-action-card">
+
+            <div class="customer-quick-action-icon">
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+            </div>
+
+
+            <div class="customer-quick-action-content">
+
+                <h3>
+                    Repair History
+                </h3>
+
+                <p>
+                    View all your previous appliance repairs services.
+                </p>
+
+            </div>
+
+
+            <div class="customer-quick-action-arrow">
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- =================================================
+             INVOICES
+        ================================================== -->
+
+        <a
+            href="invoices.html"
+            class="customer-quick-action-card">
+
+            <div class="customer-quick-action-icon">
+
+                <i class="fa-solid fa-file-invoice"></i>
+
+            </div>
+
+
+            <div class="customer-quick-action-content">
+
+                <h3>
+                    View Invoices
+                </h3>
+
+                <p>
+                    Access and review your service invoices part.
+                </p>
+
+            </div>
+
+
+            <div class="customer-quick-action-arrow">
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         BOOKING CTA
+    ====================================================== -->
+
+    <div class="customer-booking-cta">
+
+
+        <div class="customer-booking-cta-icon">
+
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+
+        </div>
+
+
+        <div class="customer-booking-cta-content">
+
+            <span>
+                NEED APPLIANCE SERVICE?
+            </span>
+
+            <h3>
+                Get your appliance repaired by a trusted technician.
+            </h3>
+
+            <p>
+                Choose your appliance, select a convenient time,
+                and book your service in just a few steps.
+            </p>
+
+        </div>
+
+
+        <a
+            href="booking.html"
+            class="customer-booking-cta-button">
+
+            Book Service
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+    </main>
+
+</div>
+ <!-- JS -->
+  <!-- =========================================================
+     LOGOUT CONFIRMATION POPUP
+========================================================= -->
+
+<div class="logout-modal-overlay" id="logoutModal">
+
+    <div class="logout-modal">
+
+        <!-- Icon -->
+        <div class="logout-modal-icon">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+
+        <!-- Message -->
+        <h2>
+            Are you sure you want to<br>
+            logout?
+        </h2>
+
+        <!-- Buttons -->
+        <div class="logout-modal-actions">
+
+            <button
+                type="button"
+                class="logout-confirm-btn"
+                id="logoutConfirm">
+                Yes
+            </button>
+
+            <button
+                type="button"
+                class="logout-cancel-btn"
+                id="logoutCancel">
+                No
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+  <script src="js/dash.js"></script>
+
+</body>
+</html>

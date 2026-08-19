@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FixCare - Home Appliance Repair</title>
+
+  <!-- Favicon -->
+
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <!-- Google Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/dash-res.css">
+</head>
+
+<body>
+    <!-- =========================================================
+     CUSTOMER DASHBOARD
+     PART 1: SIDEBAR + HEADER + HERO
+========================================================= -->
+
+<div class="customer-dashboard">
+
+
+    <!-- =====================================================
+         MOBILE SIDEBAR OVERLAY
+    ====================================================== -->
+
+    <div
+        class="customer-sidebar-overlay"
+        id="customerSidebarOverlay">
+    </div>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="customer-sidebar"
+        id="customerSidebar">
+
+
+        <!-- Sidebar Logo -->
+
+        <div class="customer-sidebar-logo">
+
+            <a href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="Appliance Service"
+                >
+
+            </a>
+
+
+            <!-- Mobile Close -->
+
+            <button
+                type="button"
+                class="customer-sidebar-close"
+                id="customerSidebarClose"
+                aria-label="Close menu">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- Sidebar Navigation -->
+
+        <nav class="customer-sidebar-nav">
+
+
+            <a
+                href="dashboard.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-table-columns"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="repair-request.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                <span>
+                    Repair Requests
+                </span>
+
+            </a>
+
+
+            
+
+
+            <a
+                href="track-service.html"
+                class="customer-nav-link active">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <span>
+                    Track Service
+                </span>
+
+            </a>
+
+
+            <a
+                href="repair-history.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                <span>
+                    Repair History
+                </span>
+
+            </a>
+
+
+            <a
+                href="invoices.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-file-invoice"></i>
+
+                <span>
+                    Invoices
+                </span>
+
+            </a>
+
+
+            <a
+                href="my-appliances.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>
+                    My Appliances
+                </span>
+
+            </a>
+
+
+            <a
+                href="support.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-headset"></i>
+
+                <span>
+                    Support
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- Sidebar Bottom -->
+
+<div class="customer-sidebar-bottom">
+
+    <button
+        type="button"
+        class="customer-logout"
+        id="logoutBtn">
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+
+        <span>
+            Logout
+        </span>
+
+    </button>
+
+</div>
+    </aside>
+    <!-- =====================================================
+         MAIN DASHBOARD
+    ====================================================== -->
+
+    <main class="customer-dashboard-main">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header class="customer-dashboard-header">
+
+
+            <!-- Hamburger -->
+
+            <button
+                type="button"
+                class="customer-menu-toggle"
+                id="customerMenuToggle"
+                aria-label="Open menu"
+                aria-expanded="false">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- Header Title -->
+
+            <div class="customer-header-title">
+
+                <span>
+                    Customer Service Portal
+                </span>
+
+                <h1>
+                    Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- Header Actions -->
+
+            <div class="customer-header-actions">
+
+
+                <!-- Notification -->
+
+                <button
+                    type="button"
+                    class="customer-header-btn customer-notification-btn"
+                    aria-label="Notifications">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="customer-notification-count">
+                        3
+                    </span>
+
+                </button>
+
+
+                <!-- Settings -->
+
+                <a
+                    href="settings.html"
+                    class="customer-header-btn"
+                    aria-label="Settings">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </a>
+
+
+                <!-- Dark Mode -->
+
+                <button
+                    type="button"
+                    class="customer-header-btn theme-toggle"
+                    id="themeToggle"
+                    aria-label="Toggle dark mode">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+
+                <!-- RTL -->
+
+                <button
+                    type="button"
+                    class="customer-header-btn rtl-toggle"
+                    id="rtlToggle"
+                    aria-label="Toggle RTL">
+
+                    <i class="fa-solid fa-right-left"></i>
+
+                </button>
+
+
+                <!-- Customer Profile -->
+
+                <a
+                    href="profile.html"
+                    class="customer-profile">
+
+
+                    <div class="customer-profile-image">
+
+                        <img
+                            src="images/profile.jpg"
+                            alt="Customer">
+
+                    </div>
+
+
+                    <div class="customer-profile-info">
+
+                        <strong>
+                            Jack
+                        </strong>
+
+                        <span>
+                            Service Account
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </header>
+        <!-- =========================================================
+     TRACK SERVICE PAGE
+     PART 1 - SECTION ONLY
+========================================================= -->
+
+<main class="track-service-page">
+
+
+    <!-- =====================================================
+         PAGE HEADER
+    ====================================================== -->
+
+    <section class="track-service-header">
+
+        <div class="track-service-header-content">
+
+            <span class="track-service-label">
+                SERVICE TRACKING
+            </span>
+
+            <h2>
+                Track Your Service
+            </h2>
+
+            <p>
+                Follow your repair request and check your
+                technician's current status.
+            </p>
+
+        </div>
+
+
+        <!-- Breadcrumb -->
+
+        <div class="track-service-breadcrumb">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+            <span>
+                Track Service
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TRACK SERVICE SECTION
+    ====================================================== -->
+
+    <section class="track-service-section">
+
+        <div class="track-service-container">
+
+
+            <!-- =================================================
+                 CURRENT SERVICE STATUS
+            ================================================== -->
+
+            <div class="track-service-overview">
+
+
+                <div class="track-service-overview-status">
+
+                    <span>
+                        CURRENT STATUS
+                    </span>
+
+                    <strong>
+                        Technician On the Way
+                    </strong>
+
+                    <small>
+                        Expected arrival within 25 minutes
+                    </small>
+
+                </div>
+
+
+                <div class="track-service-request">
+
+                    <span>
+                        REQUEST ID
+                    </span>
+
+                    <strong>
+                        #FC-1048
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SERVICE DETAILS
+            ================================================== -->
+
+            <div class="track-service-details">
+
+
+                <!-- Appliance -->
+
+                <div class="track-service-detail">
+
+                    <div class="track-service-detail-icon">
+
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Appliance
+                        </span>
+
+                        <strong>
+                            Air Conditioner
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Service Type -->
+
+                <div class="track-service-detail">
+
+                    <div class="track-service-detail-icon">
+
+                        <i class="fa-solid fa-wrench"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Service Type
+                        </span>
+
+                        <strong>
+                            Repair
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Date -->
+
+                <div class="track-service-detail">
+
+                    <div class="track-service-detail-icon">
+
+                        <i class="fa-regular fa-calendar"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Service Date
+                        </span>
+
+                        <strong>
+                            18 Aug 2026
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Time -->
+
+                <div class="track-service-detail">
+
+                    <div class="track-service-detail-icon">
+
+                        <i class="fa-regular fa-clock"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Time Slot
+                        </span>
+
+                        <strong>
+                            03:00 PM - 05:00 PM
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 TECHNICIAN DETAILS
+            ================================================== -->
+
+            <div class="track-service-technician">
+
+
+                <!-- Technician Photo -->
+
+                <div class="track-service-technician-photo">
+
+                    <img
+                        src="images/technician.jpg"
+                        alt="Technician">
+
+                </div>
+
+
+                <!-- Technician Information -->
+
+                <div class="track-service-technician-info">
+
+                    <span>
+                        YOUR TECHNICIAN
+                    </span>
+
+                    <h3>
+                        Arjun Kumar
+                    </h3>
+
+                    <div class="track-service-rating">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <strong>
+                            4.9
+                        </strong>
+
+                        <span>
+                            • 128 services completed
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Appliance Repair Specialist
+                    </p>
+
+                </div>
+
+
+                <!-- Call Technician -->
+
+                <div class="track-service-technician-actions">
+
+                    <a
+                        href="tel:+919876543210"
+                        class="track-service-call">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        Call Technician
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SERVICE PROGRESS
+            ================================================== -->
+
+            <div class="track-service-timeline-card">
+
+
+                <!-- Timeline Header -->
+
+                <div class="track-service-card-heading">
+
+                    <div>
+
+                        <span>
+                            SERVICE PROGRESS
+                        </span>
+
+                        <h3>
+                            Repair Status
+                        </h3>
+
+                    </div>
+
+
+                    <span class="track-service-live">
+
+                        <i class="fa-solid fa-circle"></i>
+
+                        Live Status
+
+                    </span>
+
+                </div>
+
+
+
+                <!-- Timeline -->
+
+                <div class="track-service-timeline">
+
+
+                    <!-- =========================================
+                         STEP 1 - COMPLETED
+                    ========================================== -->
+
+                    <div class="track-service-step completed">
+
+                        <div class="track-service-step-marker">
+
+                            <i class="fa-solid fa-check"></i>
+
+                        </div>
+
+
+                        <div class="track-service-step-content">
+
+                            <h4>
+                                Request Received
+                            </h4>
+
+                            <p>
+                                Your repair request has been
+                                received successfully.
+                            </p>
+
+                            <span>
+                                18 Aug 2026 • 09:15 AM
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         STEP 2 - COMPLETED
+                    ========================================== -->
+
+                    <div class="track-service-step completed">
+
+                        <div class="track-service-step-marker">
+
+                            <i class="fa-solid fa-check"></i>
+
+                        </div>
+
+
+                        <div class="track-service-step-content">
+
+                            <h4>
+                                Technician Assigned
+                            </h4>
+
+                            <p>
+                                Arjun Kumar has been assigned
+                                to your service request.
+                            </p>
+
+                            <span>
+                                18 Aug 2026 • 10:05 AM
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         STEP 3 - ACTIVE
+                    ========================================== -->
+
+                    <div class="track-service-step active">
+
+                        <div class="track-service-step-marker">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+
+                        <div class="track-service-step-content">
+
+                            <h4>
+                                Technician On the Way
+                            </h4>
+
+                            <p>
+                                Your technician is travelling
+                                to your service address.
+                            </p>
+
+                            <span>
+                                Expected arrival: 25 minutes
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         STEP 4 - PENDING
+                    ========================================== -->
+
+                    <div class="track-service-step">
+
+                        <div class="track-service-step-marker">
+
+                            <i class="fa-solid fa-house"></i>
+
+                        </div>
+
+
+                        <div class="track-service-step-content">
+
+                            <h4>
+                                Technician Arrived
+                            </h4>
+
+                            <p>
+                                The technician will check in
+                                when they reach your location.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         STEP 5 - PENDING
+                    ========================================== -->
+
+                    <div class="track-service-step">
+
+                        <div class="track-service-step-marker">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                        </div>
+
+
+                        <div class="track-service-step-content">
+
+                            <h4>
+                                Repair Completed
+                            </h4>
+
+                            <p>
+                                Your repair will be marked
+                                complete after service.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SERVICE ADDRESS
+            ================================================== -->
+
+            <div class="track-service-address-card">
+
+
+                <div class="track-service-address-icon">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                </div>
+
+
+                <div class="track-service-address-content">
+
+                    <span>
+                        SERVICE ADDRESS
+                    </span>
+
+                    <strong>
+                        24, Green Park Road,
+                        Chennai, Tamil Nadu
+                    </strong>
+
+                </div>
+
+
+                <a
+                    href="#"
+                    class="track-service-map-button">
+
+                    <i class="fa-solid fa-map-location-dot"></i>
+
+                    View Map
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+
+
+
+
+</main>
+
+</div>
+ <!-- JS -->
+<!-- =========================================================
+     LOGOUT CONFIRMATION POPUP
+========================================================= -->
+
+<div class="logout-modal-overlay" id="logoutModal">
+
+    <div class="logout-modal">
+
+        <!-- Icon -->
+        <div class="logout-modal-icon">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+
+        <!-- Message -->
+        <h2>
+            Are you sure you want to<br>
+            logout?
+        </h2>
+
+        <!-- Buttons -->
+        <div class="logout-modal-actions">
+
+            <button
+                type="button"
+                class="logout-confirm-btn"
+                id="logoutConfirm">
+                Yes
+            </button>
+
+            <button
+                type="button"
+                class="logout-cancel-btn"
+                id="logoutCancel">
+                No
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+  <script src="js/dash.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FixCare - Home Appliance Repair</title>
+
+  <!-- Favicon -->
+
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <!-- Google Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/dash-res.css">
+</head>
+
+<body>
+    <!-- =========================================================
+     CUSTOMER DASHBOARD
+     PART 1: SIDEBAR + HEADER + HERO
+========================================================= -->
+
+<div class="customer-dashboard">
+
+
+    <!-- =====================================================
+         MOBILE SIDEBAR OVERLAY
+    ====================================================== -->
+
+    <div
+        class="customer-sidebar-overlay"
+        id="customerSidebarOverlay">
+    </div>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="customer-sidebar"
+        id="customerSidebar">
+
+
+        <!-- Sidebar Logo -->
+
+        <div class="customer-sidebar-logo">
+
+            <a href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="Appliance Service"
+                >
+
+            </a>
+
+
+            <!-- Mobile Close -->
+
+            <button
+                type="button"
+                class="customer-sidebar-close"
+                id="customerSidebarClose"
+                aria-label="Close menu">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- Sidebar Navigation -->
+
+        <nav class="customer-sidebar-nav">
+
+
+            <a
+                href="dashboard.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-table-columns"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="repair-request.html"
+                class="customer-nav-link active">
+
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                <span>
+                    Repair Requests
+                </span>
+
+            </a>
+
+
+            
+
+
+            <a
+                href="track-service.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <span>
+                    Track Service
+                </span>
+
+            </a>
+
+
+            <a
+                href="repair-history.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                <span>
+                    Repair History
+                </span>
+
+            </a>
+
+
+            <a
+                href="invoices.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-file-invoice"></i>
+
+                <span>
+                    Invoices
+                </span>
+
+            </a>
+
+
+            <a
+                href="my-appliances.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>
+                    My Appliances
+                </span>
+
+            </a>
+
+
+            <a
+                href="support.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-headset"></i>
+
+                <span>
+                    Support
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- Sidebar Bottom -->
+
+<div class="customer-sidebar-bottom">
+
+    <button
+        type="button"
+        class="customer-logout"
+        id="logoutBtn">
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+
+        <span>
+            Logout
+        </span>
+
+    </button>
+
+</div>
+
+    </aside>
+    <!-- =====================================================
+         MAIN DASHBOARD
+    ====================================================== -->
+
+    <main class="customer-dashboard-main">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header class="customer-dashboard-header">
+
+
+            <!-- Hamburger -->
+
+            <button
+                type="button"
+                class="customer-menu-toggle"
+                id="customerMenuToggle"
+                aria-label="Open menu"
+                aria-expanded="false">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- Header Title -->
+
+            <div class="customer-header-title">
+
+                <span>
+                    Customer Service Portal
+                </span>
+
+                <h1>
+                    Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- Header Actions -->
+
+            <div class="customer-header-actions">
+
+
+                <!-- Notification -->
+
+                <button
+                    type="button"
+                    class="customer-header-btn customer-notification-btn"
+                    aria-label="Notifications">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="customer-notification-count">
+                        3
+                    </span>
+
+                </button>
+
+
+                <!-- Settings -->
+
+                <a
+                    href="settings.html"
+                    class="customer-header-btn"
+                    aria-label="Settings">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </a>
+
+
+                <!-- Dark Mode -->
+
+                <button
+                    type="button"
+                    class="customer-header-btn theme-toggle"
+                    id="themeToggle"
+                    aria-label="Toggle dark mode">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+
+                <!-- RTL -->
+
+                <button
+                    type="button"
+                    class="customer-header-btn rtl-toggle"
+                    id="rtlToggle"
+                    aria-label="Toggle RTL">
+
+                    <i class="fa-solid fa-right-left"></i>
+
+                </button>
+
+
+                <!-- Customer Profile -->
+
+                <a
+                    href="profile.html"
+                    class="customer-profile">
+
+
+                    <div class="customer-profile-image">
+
+                        <img
+                            src="images/profile.jpg"
+                            alt="Customer">
+
+                    </div>
+
+
+                    <div class="customer-profile-info">
+
+                        <strong>
+                            Jack
+                        </strong>
+
+                        <span>
+                            Service Account
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </header>
+<!-- =================================================
+             PAGE CONTENT
+        ================================================== -->
+
+        <main class="repair-request-page">
+
+
+            <!-- =================================================
+                 PAGE HEADER
+            ================================================== -->
+
+            <section class="repair-request-header">
+
+
+                <div class="repair-request-header-content">
+
+                    <span class="repair-request-label">
+                        SERVICE REQUEST
+                    </span>
+
+                    <h2>
+                        Submit a Repair Request
+                    </h2>
+
+                    <p>
+                        Tell us about your appliance problem
+                        and we'll arrange a trusted technician
+                        for you.
+                    </p>
+
+                </div>
+
+
+
+                <!-- Breadcrumb -->
+
+                <div class="repair-request-breadcrumb">
+
+                    <a href="dashboard.html">
+                        Dashboard
+                    </a>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                    <span>
+                        Repair Request
+                    </span>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 REQUEST CONTENT
+            ================================================== -->
+
+            <section class="repair-request-section">
+
+
+                <div class="repair-request-container">
+
+
+                    <!-- =========================================
+                         FORM CARD
+                    ========================================== -->
+
+                    <div class="repair-request-form-card">
+
+
+                        <!-- Form Header -->
+
+                        <div class="repair-request-form-header">
+
+
+                            <div class="repair-request-form-icon">
+
+                                <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <h2>
+                                    Repair Details
+                                </h2>
+
+                                <p>
+                                    Please provide the details
+                                    below to submit your service
+                                    request.
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- =====================================
+                             FORM
+                        ====================================== -->
+
+                        <form
+                            action="#"
+                            method="post"
+                            class="repair-request-form">
+
+
+                            <!-- =================================
+                                 01 CUSTOMER INFORMATION
+                            ================================== -->
+
+                            <div class="repair-request-form-group">
+
+
+                                <div class="repair-request-group-title">
+
+                                    <span>
+                                        01
+                                    </span>
+
+                                    <div>
+
+                                        <h3>
+                                            Customer Information
+                                        </h3>
+
+                                        <p>
+                                            Confirm your contact details.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="repair-request-fields">
+
+
+                                    <!-- Full Name -->
+
+                                    <div class="repair-request-field">
+
+                                        <label for="customer-name">
+                                            Full Name
+                                        </label>
+
+                                        <div class="repair-request-input">
+
+                                            <i class="fa-regular fa-user"></i>
+
+                                            <input
+                                                type="text"
+                                                id="customer-name"
+                                                name="customer_name"
+                                                placeholder="Enter your full name"
+                                                autocomplete="name"
+                                                required>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- Email -->
+
+                                    <div class="repair-request-field">
+
+                                        <label for="customer-email">
+                                            Email Address
+                                        </label>
+
+                                        <div class="repair-request-input">
+
+                                            <i class="fa-regular fa-envelope"></i>
+
+                                            <input
+                                                type="email"
+                                                id="customer-email"
+                                                name="customer_email"
+                                                placeholder="Enter your email"
+                                                autocomplete="email"
+                                                required>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- Phone -->
+
+                                    <div class="repair-request-field">
+
+                                        <label for="customer-phone">
+                                            Phone Number
+                                        </label>
+
+                                        <div class="repair-request-input">
+
+                                            <i class="fa-solid fa-phone"></i>
+
+                                            <input
+                                                type="tel"
+                                                id="customer-phone"
+                                                name="customer_phone"
+                                                placeholder="Enter your phone number"
+                                                autocomplete="tel"
+                                                required>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- Address -->
+
+                                    <div class="repair-request-field">
+
+                                        <label for="service-address">
+                                            Service Address
+                                        </label>
+
+                                        <div class="repair-request-input">
+
+                                            <i class="fa-solid fa-location-dot"></i>
+
+                                            <input
+                                                type="text"
+                                                id="service-address"
+                                                name="service_address"
+                                                placeholder="Enter service address"
+                                                autocomplete="street-address"
+                                                required>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- =================================
+                                 02 APPLIANCE INFORMATION
+                            ================================== -->
+
+                            <div class="repair-request-form-group">
+
+
+                                <div class="repair-request-group-title">
+
+                                    <span>
+                                        02
+                                    </span>
+
+                                    <div>
+
+                                        <h3>
+                                            Appliance Information
+                                        </h3>
+
+                                        <p>
+                                            Select the appliance
+                                            that needs service.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="repair-request-fields">
+
+
+                                    <!-- Appliance -->
+
+                                    <div class="repair-request-field">
+
+                                        <label for="appliance">
+                                            Appliance
+                                        </label>
+
+                                        <div class="repair-request-input">
+
+                                            <i class="fa-solid fa-house"></i>
+
+                                            <select
+                                                id="appliance"
+                                                name="appliance"
+                                                required>
+
+                                                <option
+                                                    value=""
+                                                    selected
+                                                    disabled>
+
+                                                    Select appliance
+
+                                                </option>
+
+                                                <option value="air-conditioner">
+                                                    Air Conditioner
+                                                </option>
+
+                                                <option value="refrigerator">
+                                                    Refrigerator
+                                                </option>
+
+                                                <option value="washing-machine">
+                                                    Washing Machine
+                                                </option>
+
+                                                <option value="television">
+                                                    Television
+                                                </option>
+
+                                                <option value="microwave">
+                                                    Microwave
+                                                </option>
+
+                                                <option value="dishwasher">
+                                                    Dishwasher
+                                                </option>
+
+                                                <option value="other">
+                                                    Other
+                                                </option>
+
+                                            </select>
+
+                                            <i class="fa-solid fa-chevron-down repair-request-select-arrow"></i>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- Service Type -->
+
+                                    <div class="repair-request-field">
+
+                                        <label for="service-type">
+                                            Service Type
+                                        </label>
+
+                                        <div class="repair-request-input">
+
+                                            <i class="fa-solid fa-wrench"></i>
+
+                                            <select
+                                                id="service-type"
+                                                name="service_type"
+                                                required>
+
+                                                <option
+                                                    value=""
+                                                    selected
+                                                    disabled>
+
+                                                    Select service type
+
+                                                </option>
+
+                                                <option value="repair">
+                                                    Repair
+                                                </option>
+
+                                                <option value="maintenance">
+                                                    Maintenance
+                                                </option>
+
+                                                <option value="installation">
+                                                    Installation
+                                                </option>
+
+                                                <option value="inspection">
+                                                    Inspection
+                                                </option>
+
+                                                <option value="replacement">
+                                                    Parts Replacement
+                                                </option>
+
+                                            </select>
+
+                                            <i class="fa-solid fa-chevron-down repair-request-select-arrow"></i>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- Problem Description -->
+
+                                    <div
+                                        class="repair-request-field repair-request-field-full">
+
+                                        <label for="problem-description">
+                                            Problem Description
+                                        </label>
+
+                                        <div
+                                            class="repair-request-input repair-request-textarea">
+
+                                            
+                                            <textarea
+                                                id="problem-description"
+                                                name="problem_description"
+                                                rows="5"
+                                                placeholder="Describe the problem with your appliance..."
+                                                required></textarea>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- =================================
+                                 03 APPOINTMENT DETAILS
+                            ================================== -->
+
+                            <div class="repair-request-form-group">
+
+
+                                <div class="repair-request-group-title">
+
+                                    <span>
+                                        03
+                                    </span>
+
+                                    <div>
+
+                                        <h3>
+                                            Appointment Details
+                                        </h3>
+
+                                        <p>
+                                            Choose your preferred
+                                            service date and time.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="repair-request-fields">
+
+
+                                    <!-- Date -->
+
+                                    <div class="repair-request-field">
+
+                                        <label for="preferred-date">
+                                            Preferred Date
+                                        </label>
+
+                                        <div class="repair-request-input">
+
+                                            <i class="fa-regular fa-calendar"></i>
+
+                                            <input
+                                                type="date"
+                                                id="preferred-date"
+                                                name="preferred_date"
+                                                required>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- Time -->
+
+                                    <div class="repair-request-field">
+
+                                        <label for="preferred-time">
+                                            Preferred Time
+                                        </label>
+
+                                        <div class="repair-request-input">
+
+                                            <i class="fa-regular fa-clock"></i>
+
+                                            <select
+                                                id="preferred-time"
+                                                name="preferred_time"
+                                                required>
+
+                                                <option
+                                                    value=""
+                                                    selected
+                                                    disabled>
+
+                                                    Select preferred time
+
+                                                </option>
+
+                                                <option value="09:00">
+                                                    09:00 AM – 11:00 AM
+                                                </option>
+
+                                                <option value="11:00">
+                                                    11:00 AM – 01:00 PM
+                                                </option>
+
+                                                <option value="13:00">
+                                                    01:00 PM – 03:00 PM
+                                                </option>
+
+                                                <option value="15:00">
+                                                    03:00 PM – 05:00 PM
+                                                </option>
+
+                                                <option value="17:00">
+                                                    05:00 PM – 07:00 PM
+                                                </option>
+
+                                            </select>
+
+                                            <i class="fa-solid fa-chevron-down repair-request-select-arrow"></i>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- Additional Notes -->
+
+                                    <div
+                                        class="repair-request-field repair-request-field-full">
+
+                                        <label for="additional-notes">
+
+                                            Additional Notes
+
+                                            <span class="optional">
+                                                Optional
+                                            </span>
+
+                                        </label>
+
+                                        <div
+                                            class="repair-request-input repair-request-textarea">
+
+                                            
+
+                                            <textarea
+                                                id="additional-notes"
+                                                name="additional_notes"
+                                                rows="4"
+                                                placeholder="Add any additional information for the technician..."></textarea>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- =================================
+                                 FORM ACTIONS
+                            ================================== -->
+
+                            <div class="repair-request-form-actions">
+
+
+                                <a
+                                    href="dashboard.html"
+                                    class="repair-request-cancel">
+
+                                    Cancel
+
+                                </a>
+
+
+                                <button
+                                    type="submit"
+                                    class="repair-request-submit">
+
+                                    Submit Repair Request
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </button>
+
+
+                            </div>
+
+
+                        </form>
+
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         SERVICE SUMMARY
+                    ========================================== -->
+
+                    <aside class="repair-request-summary">
+
+
+                        <!-- Summary Header -->
+
+                        <div class="repair-request-summary-header">
+
+                            <span>
+                                SERVICE SUMMARY
+                            </span>
+
+                            <h2>
+                                Your Request
+                            </h2>
+
+                            <p>
+                                Review your selected service
+                                details before submitting.
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- Selected Appliance -->
+
+                        <div class="repair-request-summary-appliance">
+
+
+                            <div class="repair-request-summary-appliance-icon">
+
+                                <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Selected Appliance
+                                </span>
+
+                                <strong id="summary-appliance">
+                                    Not selected
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- Summary List -->
+
+                        <div class="repair-request-summary-list">
+
+
+                            <div class="repair-request-summary-item">
+
+                                <span>
+                                    Service Type
+                                </span>
+
+                                <strong id="summary-service">
+                                    Not selected
+                                </strong>
+
+                            </div>
+
+
+                            <div class="repair-request-summary-item">
+
+                                <span>
+                                    Preferred Date
+                                </span>
+
+                                <strong id="summary-date">
+                                    Not selected
+                                </strong>
+
+                            </div>
+
+
+                            <div class="repair-request-summary-item">
+
+                                <span>
+                                    Preferred Time
+                                </span>
+
+                                <strong id="summary-time">
+                                    Not selected
+                                </strong>
+
+                            </div>
+
+
+                            <div class="repair-request-summary-item">
+
+                                <span>
+                                    Service Address
+                                </span>
+
+                                <strong id="summary-address">
+                                    Not provided
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- Information Note -->
+
+                        <div class="repair-request-summary-note">
+
+                            <i class="fa-solid fa-circle-info"></i>
+
+                            <p>
+                                A technician will be assigned
+                                after your repair request is
+                                submitted.
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- Support -->
+
+                        <div class="repair-request-help">
+
+
+                            <div class="repair-request-help-icon">
+
+                                <i class="fa-solid fa-headset"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Need Help?
+                                </span>
+
+                                <a href="contact.html">
+                                    Contact Support
+                                </a>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </aside>
+
+
+                </div>
+
+
+            </section>
+            <!-- =========================================================
+     REQUEST CONFIRMATION
+     PART 1 - HTML ONLY
+========================================================= -->
+
+<section
+    class="repair-confirmation-section"
+    id="repair-confirmation">
+
+
+    <div class="repair-confirmation-container">
+
+
+        <!-- =================================================
+             SUCCESS CARD
+        ================================================== -->
+
+        <div class="repair-confirmation-card">
+
+
+            <!-- Success Icon -->
+
+            <div class="repair-confirmation-icon">
+
+                <i class="fa-solid fa-check"></i>
+
+            </div>
+
+
+            <!-- Heading -->
+
+            <span class="repair-confirmation-label">
+                REQUEST SUBMITTED
+            </span>
+
+
+            <h2>
+                Your Repair Request Has Been Submitted
+            </h2>
+
+
+            <p class="repair-confirmation-description">
+                Thank you for contacting FixCare. Your repair
+                request has been received successfully. A trusted
+                technician will be assigned to your request shortly.
+            </p>
+
+
+
+            <!-- =================================================
+                 REQUEST ID
+            ================================================== -->
+
+            <div class="repair-confirmation-id">
+
+                <span>
+                    Repair Request ID
+                </span>
+
+                <strong id="confirmation-request-id">
+                    #FC-1048
+                </strong>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 REQUEST DETAILS
+            ================================================== -->
+
+            <div class="repair-confirmation-details">
+
+
+                <!-- Appliance -->
+
+                <div class="repair-confirmation-detail">
+
+                    <div class="repair-confirmation-detail-icon">
+
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Appliance
+                        </span>
+
+                        <strong id="confirmation-appliance">
+                            Air Conditioner
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Service -->
+
+                <div class="repair-confirmation-detail">
+
+                    <div class="repair-confirmation-detail-icon">
+
+                        <i class="fa-solid fa-wrench"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Service Type
+                        </span>
+
+                        <strong id="confirmation-service">
+                            Repair
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Date -->
+
+                <div class="repair-confirmation-detail">
+
+                    <div class="repair-confirmation-detail-icon">
+
+                        <i class="fa-regular fa-calendar"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Preferred Date
+                        </span>
+
+                        <strong id="confirmation-date">
+                            Not selected
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Time -->
+
+                <div class="repair-confirmation-detail">
+
+                    <div class="repair-confirmation-detail-icon">
+
+                        <i class="fa-regular fa-clock"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Preferred Time
+                        </span>
+
+                        <strong id="confirmation-time">
+                            Not selected
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Address -->
+
+                <div class="repair-confirmation-detail repair-confirmation-detail-full">
+
+                    <div class="repair-confirmation-detail-icon">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Service Address
+                        </span>
+
+                        <strong id="confirmation-address">
+                            Not provided
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 STATUS
+            ================================================== -->
+
+            <div class="repair-confirmation-status">
+
+
+                <div class="repair-confirmation-status-icon">
+
+                    <i class="fa-solid fa-hourglass-half"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Current Status
+                    </span>
+
+                    <strong>
+                        Request Received
+                    </strong>
+
+                    <p>
+                        We are finding the right technician
+                        for your service request.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 INFORMATION
+            ================================================== -->
+
+            <div class="repair-confirmation-info">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                <p>
+                    You will be able to track your technician's
+                    assignment and arrival status from the
+                    Track Service page.
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 ACTION BUTTONS
+            ================================================== -->
+
+            <div class="repair-confirmation-actions">
+
+
+                <a
+                    href="dashboard.html"
+                    class="repair-confirmation-secondary">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Back to Dashboard
+
+                </a>
+
+
+                <a
+                    href="track-service.html"
+                    class="repair-confirmation-primary">
+
+                    Track Service
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+    </main>
+
+</div>
+ <!-- JS -->
+<!-- =========================================================
+     LOGOUT CONFIRMATION POPUP
+========================================================= -->
+
+<div class="logout-modal-overlay" id="logoutModal">
+
+    <div class="logout-modal">
+
+        <!-- Icon -->
+        <div class="logout-modal-icon">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+
+        <!-- Message -->
+        <h2>
+            Are you sure you want to<br>
+            logout?
+        </h2>
+
+        <!-- Buttons -->
+        <div class="logout-modal-actions">
+
+            <button
+                type="button"
+                class="logout-confirm-btn"
+                id="logoutConfirm">
+                Yes
+            </button>
+
+            <button
+                type="button"
+                class="logout-cancel-btn"
+                id="logoutCancel">
+                No
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+  <script src="js/dash.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FixCare - Home Appliance Repair</title>
+
+  <!-- Favicon -->
+
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <!-- Google Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/dash-res.css">
+</head>
+
+<body>
+    <!-- =========================================================
+     CUSTOMER DASHBOARD
+     PART 1: SIDEBAR + HEADER + HERO
+========================================================= -->
+
+<div class="customer-dashboard">
+
+
+    <!-- =====================================================
+         MOBILE SIDEBAR OVERLAY
+    ====================================================== -->
+
+    <div
+        class="customer-sidebar-overlay"
+        id="customerSidebarOverlay">
+    </div>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="customer-sidebar"
+        id="customerSidebar">
+
+
+        <!-- Sidebar Logo -->
+
+        <div class="customer-sidebar-logo">
+
+            <a href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="Appliance Service"
+                >
+
+            </a>
+
+
+            <!-- Mobile Close -->
+
+            <button
+                type="button"
+                class="customer-sidebar-close"
+                id="customerSidebarClose"
+                aria-label="Close menu">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- Sidebar Navigation -->
+
+        <nav class="customer-sidebar-nav">
+
+
+            <a
+                href="dashboard.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-table-columns"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="repair-request.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                <span>
+                    Repair Requests
+                </span>
+
+            </a>
+
+
+            
+
+
+            <a
+                href="track-service.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <span>
+                    Track Service
+                </span>
+
+            </a>
+
+
+            <a
+                href="repair-history.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                <span>
+                    Repair History
+                </span>
+
+            </a>
+
+
+            <a
+                href="invoices.html"
+                class="customer-nav-link active">
+
+                <i class="fa-solid fa-file-invoice"></i>
+
+                <span>
+                    Invoices
+                </span>
+
+            </a>
+
+
+            <a
+                href="my-appliances.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>
+                    My Appliances
+                </span>
+
+            </a>
+
+
+            <a
+                href="support.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-headset"></i>
+
+                <span>
+                    Support
+                </span>
+
+            </a>
+
+        </nav>
+
+
+       <!-- Sidebar Bottom -->
+
+<div class="customer-sidebar-bottom">
+
+    <button
+        type="button"
+        class="customer-logout"
+        id="logoutBtn">
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+
+        <span>
+            Logout
+        </span>
+
+    </button>
+
+</div>
+
+    </aside>
+    <!-- =====================================================
+         MAIN DASHBOARD
+    ====================================================== -->
+
+    <main class="customer-dashboard-main">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header class="customer-dashboard-header">
+
+
+            <!-- Hamburger -->
+
+            <button
+                type="button"
+                class="customer-menu-toggle"
+                id="customerMenuToggle"
+                aria-label="Open menu"
+                aria-expanded="false">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- Header Title -->
+
+            <div class="customer-header-title">
+
+                <span>
+                    Customer Service Portal
+                </span>
+
+                <h1>
+                    Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- Header Actions -->
+
+            <div class="customer-header-actions">
+
+
+                <!-- Notification -->
+
+                <button
+                    type="button"
+                    class="customer-header-btn customer-notification-btn"
+                    aria-label="Notifications">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="customer-notification-count">
+                        3
+                    </span>
+
+                </button>
+
+
+                <!-- Settings -->
+
+                <a
+                    href="settings.html"
+                    class="customer-header-btn"
+                    aria-label="Settings">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </a>
+
+
+                <!-- Dark Mode -->
+
+                <button
+                    type="button"
+                    class="customer-header-btn theme-toggle"
+                    id="themeToggle"
+                    aria-label="Toggle dark mode">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+
+                <!-- RTL -->
+
+                <button
+                    type="button"
+                    class="customer-header-btn rtl-toggle"
+                    id="rtlToggle"
+                    aria-label="Toggle RTL">
+
+                    <i class="fa-solid fa-right-left"></i>
+
+                </button>
+
+
+                <!-- Customer Profile -->
+
+                <a
+                    href="profile.html"
+                    class="customer-profile">
+
+
+                    <div class="customer-profile-image">
+
+                        <img
+                            src="images/profile.jpg"
+                            alt="Customer">
+
+                    </div>
+
+
+                    <div class="customer-profile-info">
+
+                        <strong>
+                            Jack
+                        </strong>
+
+                        <span>
+                            Service Account
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </header>
+        <!-- =========================================================
+     INVOICES PAGE
+     PART 1 - HTML ONLY
+     SECTION ONLY
+========================================================= -->
+
+<main class="invoices-page">
+
+
+    <!-- =====================================================
+         PAGE HEADER
+    ====================================================== -->
+
+    <section class="invoices-header">
+
+        <div class="invoices-header-content">
+
+            <span class="invoices-label">
+                BILLING & PAYMENTS
+            </span>
+
+            <h2>
+                Invoices
+            </h2>
+
+            <p>
+                View your repair invoices, payment status,
+                service charges, and billing details.
+            </p>
+
+        </div>
+
+
+        <!-- Breadcrumb -->
+
+        <div class="invoices-breadcrumb">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+            <span>
+                Invoices
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         INVOICE SECTION
+    ====================================================== -->
+
+    <section class="invoices-section">
+
+        <div class="invoices-container">
+
+
+            <!-- =================================================
+                 SUMMARY CARDS
+            ================================================== -->
+
+            <div class="invoice-summary">
+
+
+                <!-- Total Invoices -->
+
+                <div class="invoice-summary-card">
+
+                    <div class="invoice-summary-icon">
+
+                        <i class="fa-solid fa-file-invoice"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            TOTAL INVOICES
+                        </span>
+
+                        <strong>
+                            12
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Paid -->
+
+                <div class="invoice-summary-card">
+
+                    <div class="invoice-summary-icon paid">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            PAID
+                        </span>
+
+                        <strong>
+                            10
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Pending -->
+
+                <div class="invoice-summary-card">
+
+                    <div class="invoice-summary-icon pending">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            PENDING
+                        </span>
+
+                        <strong>
+                            2
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Total Amount -->
+
+                <div class="invoice-summary-card">
+
+                    <div class="invoice-summary-icon amount">
+
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            TOTAL AMOUNT
+                        </span>
+
+                        <strong>
+                            ₹8,450
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 INVOICE TOOLBAR
+            ================================================== -->
+
+            <div class="invoice-toolbar">
+
+
+                <div class="invoice-toolbar-title">
+
+                    <span>
+                        BILLING RECORDS
+                    </span>
+
+                    <h3>
+                        Your Invoices
+                    </h3>
+
+                </div>
+
+
+                <div class="invoice-toolbar-actions">
+
+
+                    <!-- Search -->
+
+                    <div class="invoice-search">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="text"
+                            id="invoice-search"
+                            placeholder="Search invoice..."
+                        >
+
+                    </div>
+
+
+                    <!-- Filter -->
+
+                    <div class="invoice-filter">
+
+                        <select id="invoice-status">
+
+                            <option value="all">
+                                All Invoices
+                            </option>
+
+                            <option value="paid">
+                                Paid
+                            </option>
+
+                            <option value="pending">
+                                Pending
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 INVOICE LIST
+            ================================================== -->
+
+            <div class="invoice-list">
+
+
+                <!-- =================================================
+                     INVOICE 1
+                ================================================== -->
+
+                <article class="invoice-card paid">
+
+
+                    <div class="invoice-main-info">
+
+                        <div class="invoice-icon">
+
+                            <i class="fa-solid fa-file-invoice"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                INVOICE
+                            </span>
+
+                            <h4>
+                                INV-1048
+                            </h4>
+
+                            <small>
+                                AC General Repair
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="invoice-details">
+
+
+                        <div>
+
+                            <span>
+                                SERVICE DATE
+                            </span>
+
+                            <strong>
+                                18 Aug 2026
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                APPLIANCE
+                            </span>
+
+                            <strong>
+                                Air Conditioner
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                AMOUNT
+                            </span>
+
+                            <strong>
+                                ₹1,850
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="invoice-status">
+
+                        <span class="invoice-status-badge paid">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Paid
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="invoice-actions">
+
+                        <a
+                            href="invoice-details.html"
+                            class="invoice-view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            View
+
+                        </a>
+
+
+                        <a
+                            href="#"
+                            class="invoice-download-btn"
+                            aria-label="Download invoice">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </a>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- =================================================
+                     INVOICE 2
+                ================================================== -->
+
+                <article class="invoice-card paid">
+
+
+                    <div class="invoice-main-info">
+
+                        <div class="invoice-icon">
+
+                            <i class="fa-solid fa-file-invoice"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                INVOICE
+                            </span>
+
+                            <h4>
+                                INV-1021
+                            </h4>
+
+                            <small>
+                                Drum & Motor Repair
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="invoice-details">
+
+
+                        <div>
+
+                            <span>
+                                SERVICE DATE
+                            </span>
+
+                            <strong>
+                                02 Aug 2026
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                APPLIANCE
+                            </span>
+
+                            <strong>
+                                Washing Machine
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                AMOUNT
+                            </span>
+
+                            <strong>
+                                ₹950
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="invoice-status">
+
+                        <span class="invoice-status-badge paid">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Paid
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="invoice-actions">
+
+                        <a
+                            href="invoice-details.html"
+                            class="invoice-view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            View
+
+                        </a>
+
+
+                        <a
+                            href="#"
+                            class="invoice-download-btn"
+                            aria-label="Download invoice">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </a>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- =================================================
+                     INVOICE 3
+                ================================================== -->
+
+                <article class="invoice-card paid">
+
+
+                    <div class="invoice-main-info">
+
+                        <div class="invoice-icon">
+
+                            <i class="fa-solid fa-file-invoice"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                INVOICE
+                            </span>
+
+                            <h4>
+                                INV-0987
+                            </h4>
+
+                            <small>
+                                Display Panel Repair
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="invoice-details">
+
+
+                        <div>
+
+                            <span>
+                                SERVICE DATE
+                            </span>
+
+                            <strong>
+                                21 Jul 2026
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                APPLIANCE
+                            </span>
+
+                            <strong>
+                                Television
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                AMOUNT
+                            </span>
+
+                            <strong>
+                                ₹2,400
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="invoice-status">
+
+                        <span class="invoice-status-badge paid">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Paid
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="invoice-actions">
+
+                        <a
+                            href="invoice-details.html"
+                            class="invoice-view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            View
+
+                        </a>
+
+
+                        <a
+                            href="#"
+                            class="invoice-download-btn"
+                            aria-label="Download invoice">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </a>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- =================================================
+                     INVOICE 4 - PENDING
+                ================================================== -->
+
+                <article class="invoice-card pending">
+
+
+                    <div class="invoice-main-info">
+
+                        <div class="invoice-icon pending">
+
+                            <i class="fa-solid fa-file-invoice"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                INVOICE
+                            </span>
+
+                            <h4>
+                                INV-0964
+                            </h4>
+
+                            <small>
+                                Refrigerator Service
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="invoice-details">
+
+
+                        <div>
+
+                            <span>
+                                SERVICE DATE
+                            </span>
+
+                            <strong>
+                                15 Jul 2026
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                APPLIANCE
+                            </span>
+
+                            <strong>
+                                Refrigerator
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                AMOUNT
+                            </span>
+
+                            <strong>
+                                ₹1,250
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="invoice-status">
+
+                        <span class="invoice-status-badge pending">
+
+                            <i class="fa-solid fa-clock"></i>
+
+                            Pending
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="invoice-actions">
+
+                        <a
+                            href="invoice-details.html"
+                            class="invoice-view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            View
+
+                        </a>
+
+
+                        <a
+                            href="#"
+                            class="invoice-download-btn"
+                            aria-label="Download invoice">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </a>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- =================================================
+                     INVOICE 5 - PENDING
+                ================================================== -->
+
+                <article class="invoice-card pending">
+
+
+                    <div class="invoice-main-info">
+
+                        <div class="invoice-icon pending">
+
+                            <i class="fa-solid fa-file-invoice"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                INVOICE
+                            </span>
+
+                            <h4>
+                                INV-0942
+                            </h4>
+
+                            <small>
+                                Microwave Repair
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="invoice-details">
+
+
+                        <div>
+
+                            <span>
+                                SERVICE DATE
+                            </span>
+
+                            <strong>
+                                08 Jul 2026
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                APPLIANCE
+                            </span>
+
+                            <strong>
+                                Microwave
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                AMOUNT
+                            </span>
+
+                            <strong>
+                                ₹2,000
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="invoice-status">
+
+                        <span class="invoice-status-badge pending">
+
+                            <i class="fa-solid fa-clock"></i>
+
+                            Pending
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="invoice-actions">
+
+                        <a
+                            href="invoice-details.html"
+                            class="invoice-view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            View
+
+                        </a>
+
+
+                        <a
+                            href="#"
+                            class="invoice-download-btn"
+                            aria-label="Download invoice">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </a>
+
+                    </div>
+
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+<!-- =========================================================
+     INVOICE PAYMENT SUMMARY
+     PART 1 - HTML ONLY
+     SECTION ONLY
+========================================================= -->
+
+<section class="invoice-payment-summary">
+
+    <div class="invoice-payment-container">
+
+
+        <!-- =================================================
+             SECTION HEADER
+        ================================================== -->
+
+        <div class="invoice-payment-header">
+
+            <div>
+
+                <span class="invoice-payment-label">
+                    PAYMENT OVERVIEW
+                </span>
+
+                <h3>
+                    Payment Summary
+                </h3>
+
+                <p>
+                    View your total billing amount and payment
+                    status at a glance.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PAYMENT SUMMARY CARDS
+        ================================================== -->
+
+        <div class="invoice-payment-cards">
+
+
+            <!-- Total Billed -->
+
+            <div class="invoice-payment-card">
+
+                <div class="invoice-payment-icon total">
+
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        TOTAL BILLED
+                    </span>
+
+                    <strong>
+                        ₹8,450
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Paid Amount -->
+
+            <div class="invoice-payment-card">
+
+                <div class="invoice-payment-icon paid">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        PAID AMOUNT
+                    </span>
+
+                    <strong>
+                        ₹5,200
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Pending Amount -->
+
+            <div class="invoice-payment-card">
+
+                <div class="invoice-payment-icon pending">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        PENDING AMOUNT
+                    </span>
+
+                    <strong>
+                        ₹3,250
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             PAYMENT PROGRESS
+        ================================================== -->
+
+        <div class="invoice-payment-progress-card">
+
+
+            <div class="invoice-payment-progress-header">
+
+                <div>
+
+                    <span>
+                        PAYMENT STATUS
+                    </span>
+
+                    <h4>
+                        Overall Payment Progress
+                    </h4>
+
+                </div>
+
+                <strong>
+                    62%
+                </strong>
+
+            </div>
+
+
+            <!-- Progress Bar -->
+
+            <div class="invoice-progress-bar">
+
+                <div
+                    class="invoice-progress-fill"
+                    style="width: 62%;">
+                </div>
+
+            </div>
+
+
+            <div class="invoice-progress-info">
+
+                <span>
+                    ₹5,200 paid
+                </span>
+
+                <span>
+                    ₹3,250 remaining
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             PAYMENT DETAILS
+        ================================================== -->
+
+        <div class="invoice-payment-details">
+
+
+            <!-- Last Payment -->
+
+            <div class="invoice-payment-detail-item">
+
+                <div class="invoice-payment-detail-icon">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        LAST PAYMENT
+                    </span>
+
+                    <strong>
+                        18 Aug 2026
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Payment Method -->
+
+            <div class="invoice-payment-detail-item">
+
+                <div class="invoice-payment-detail-icon">
+
+                    <i class="fa-solid fa-credit-card"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        PAYMENT METHOD
+                    </span>
+
+                    <strong>
+                        UPI
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Pending Invoices -->
+
+            <div class="invoice-payment-detail-item">
+
+                <div class="invoice-payment-detail-icon">
+
+                    <i class="fa-solid fa-receipt"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        PENDING INVOICES
+                    </span>
+
+                    <strong>
+                        2 Invoices
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+
+
+
+
+</main>
+
+</div>
+ <!-- JS -->
+<!-- =========================================================
+     LOGOUT CONFIRMATION POPUP
+========================================================= -->
+
+<div class="logout-modal-overlay" id="logoutModal">
+
+    <div class="logout-modal">
+
+        <!-- Icon -->
+        <div class="logout-modal-icon">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+
+        <!-- Message -->
+        <h2>
+            Are you sure you want to<br>
+            logout?
+        </h2>
+
+        <!-- Buttons -->
+        <div class="logout-modal-actions">
+
+            <button
+                type="button"
+                class="logout-confirm-btn"
+                id="logoutConfirm">
+                Yes
+            </button>
+
+            <button
+                type="button"
+                class="logout-cancel-btn"
+                id="logoutCancel">
+                No
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+  <script src="js/dash.js"></script>
+
+</body>
+</html>

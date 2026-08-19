@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FixCare - Home Appliance Repair</title>
+
+  <!-- Favicon -->
+
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <!-- Google Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/dash-res.css">
+</head>
+
+<body>
+    <!-- =========================================================
+     CUSTOMER DASHBOARD
+     PART 1: SIDEBAR + HEADER + HERO
+========================================================= -->
+
+<div class="customer-dashboard">
+
+
+    <!-- =====================================================
+         MOBILE SIDEBAR OVERLAY
+    ====================================================== -->
+
+    <div
+        class="customer-sidebar-overlay"
+        id="customerSidebarOverlay">
+    </div>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="customer-sidebar"
+        id="customerSidebar">
+
+
+        <!-- Sidebar Logo -->
+
+        <div class="customer-sidebar-logo">
+
+            <a href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="Appliance Service"
+                >
+
+            </a>
+
+
+            <!-- Mobile Close -->
+
+            <button
+                type="button"
+                class="customer-sidebar-close"
+                id="customerSidebarClose"
+                aria-label="Close menu">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- Sidebar Navigation -->
+
+        <nav class="customer-sidebar-nav">
+
+
+            <a
+                href="dashboard.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-table-columns"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="repair-request.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                <span>
+                    Repair Requests
+                </span>
+
+            </a>
+
+
+            
+
+
+            <a
+                href="track-service.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <span>
+                    Track Service
+                </span>
+
+            </a>
+
+
+            <a
+                href="repair-history.html"
+                class="customer-nav-link active">
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                <span>
+                    Repair History
+                </span>
+
+            </a>
+
+
+            <a
+                href="invoices.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-file-invoice"></i>
+
+                <span>
+                    Invoices
+                </span>
+
+            </a>
+
+
+            <a
+                href="my-appliances.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>
+                    My Appliances
+                </span>
+
+            </a>
+
+
+            <a
+                href="support.html"
+                class="customer-nav-link">
+
+                <i class="fa-solid fa-headset"></i>
+
+                <span>
+                    Support
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- Sidebar Bottom -->
+
+<div class="customer-sidebar-bottom">
+
+    <button
+        type="button"
+        class="customer-logout"
+        id="logoutBtn">
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+
+        <span>
+            Logout
+        </span>
+
+    </button>
+
+</div>
+
+    </aside>
+    <!-- =====================================================
+         MAIN DASHBOARD
+    ====================================================== -->
+
+    <main class="customer-dashboard-main">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header class="customer-dashboard-header">
+
+
+            <!-- Hamburger -->
+
+            <button
+                type="button"
+                class="customer-menu-toggle"
+                id="customerMenuToggle"
+                aria-label="Open menu"
+                aria-expanded="false">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- Header Title -->
+
+            <div class="customer-header-title">
+
+                <span>
+                    Customer Service Portal
+                </span>
+
+                <h1>
+                    Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- Header Actions -->
+
+            <div class="customer-header-actions">
+
+
+                <!-- Notification -->
+
+                <button
+                    type="button"
+                    class="customer-header-btn customer-notification-btn"
+                    aria-label="Notifications">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="customer-notification-count">
+                        3
+                    </span>
+
+                </button>
+
+
+                <!-- Settings -->
+
+                <a
+                    href="settings.html"
+                    class="customer-header-btn"
+                    aria-label="Settings">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </a>
+
+
+                <!-- Dark Mode -->
+
+                <button
+                    type="button"
+                    class="customer-header-btn theme-toggle"
+                    id="themeToggle"
+                    aria-label="Toggle dark mode">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+
+                <!-- RTL -->
+
+                <button
+                    type="button"
+                    class="customer-header-btn rtl-toggle"
+                    id="rtlToggle"
+                    aria-label="Toggle RTL">
+
+                    <i class="fa-solid fa-right-left"></i>
+
+                </button>
+
+
+                <!-- Customer Profile -->
+
+                <a
+                    href="profile.html"
+                    class="customer-profile">
+
+
+                    <div class="customer-profile-image">
+
+                        <img
+                            src="images/profile.jpg"
+                            alt="Customer">
+
+                    </div>
+
+
+                    <div class="customer-profile-info">
+
+                        <strong>
+                            Jack
+                        </strong>
+
+                        <span>
+                            Service Account
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </header>
+        <!-- =========================================================
+     REPAIR HISTORY PAGE
+     PART 1 - SECTION ONLY
+========================================================= -->
+
+<main class="repair-history-page">
+
+
+    <!-- =====================================================
+         PAGE HEADER
+    ====================================================== -->
+
+    <section class="repair-history-header">
+
+        <div class="repair-history-header-content">
+
+            <span class="repair-history-label">
+                SERVICE RECORDS
+            </span>
+
+            <h2>
+                Repair History
+            </h2>
+
+            <p>
+                View your previous repair services, technicians,
+                service details, and completed requests.
+            </p>
+
+        </div>
+
+
+        <!-- Breadcrumb -->
+
+        <div class="repair-history-breadcrumb">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+            <span>
+                Repair History
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         REPAIR HISTORY SECTION
+    ====================================================== -->
+
+    <section class="repair-history-section">
+
+        <div class="repair-history-container">
+
+
+            <!-- =================================================
+                 SUMMARY CARDS
+            ================================================== -->
+
+            <div class="repair-history-summary">
+
+
+                <!-- Total Repairs -->
+
+                <div class="repair-history-summary-card">
+
+                    <div class="repair-history-summary-icon">
+
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            TOTAL REPAIRS
+                        </span>
+
+                        <strong>
+                            12
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Completed -->
+
+                <div class="repair-history-summary-card">
+
+                    <div class="repair-history-summary-icon completed">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            COMPLETED
+                        </span>
+
+                        <strong>
+                            10
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- In Progress -->
+
+                <div class="repair-history-summary-card">
+
+                    <div class="repair-history-summary-icon progress">
+
+                        <i class="fa-solid fa-spinner"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            IN PROGRESS
+                        </span>
+
+                        <strong>
+                            1
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Cancelled -->
+
+                <div class="repair-history-summary-card">
+
+                    <div class="repair-history-summary-icon cancelled">
+
+                        <i class="fa-solid fa-circle-xmark"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            CANCELLED
+                        </span>
+
+                        <strong>
+                            1
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 HISTORY HEADER / FILTER
+            ================================================== -->
+
+            <div class="repair-history-toolbar">
+
+
+                <div class="repair-history-toolbar-title">
+
+                    <span>
+                        YOUR SERVICE RECORDS
+                    </span>
+
+                    <h3>
+                        Previous Repairs
+                    </h3>
+
+                </div>
+
+
+                <!-- Filter -->
+
+                <div class="repair-history-filter">
+
+                    <label for="repair-history-status">
+                        Status
+                    </label>
+
+                    <select id="repair-history-status">
+
+                        <option value="all">
+                            All Repairs
+                        </option>
+
+                        <option value="completed">
+                            Completed
+                        </option>
+
+                        <option value="progress">
+                            In Progress
+                        </option>
+
+                        <option value="cancelled">
+                            Cancelled
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 REPAIR HISTORY LIST
+            ================================================== -->
+
+            <div class="repair-history-list">
+
+
+                <!-- =================================================
+                     REPAIR ITEM 1
+                ================================================== -->
+
+                <article
+                    class="repair-history-card completed">
+
+
+                    <div class="repair-history-appliance">
+
+                        <div class="repair-history-appliance-icon">
+
+                            <i class="fa-solid fa-snowflake"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                AIR CONDITIONER
+                            </span>
+
+                            <h4>
+                                AC General Repair
+                            </h4>
+
+                            <small>
+                                Request ID: #FC-1048
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="repair-history-info">
+
+                        <div>
+
+                            <span>
+                                SERVICE DATE
+                            </span>
+
+                            <strong>
+                                18 Aug 2026
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                TECHNICIAN
+                            </span>
+
+                            <strong>
+                                Arjun Kumar
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                AMOUNT
+                            </span>
+
+                            <strong>
+                                ₹1,850
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="repair-history-status">
+
+                        <span class="repair-status completed">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Completed
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="repair-details.html"
+                        class="repair-history-view">
+
+                        View Details
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                </article>
+
+
+
+                <!-- =================================================
+                     REPAIR ITEM 2
+                ================================================== -->
+
+                <article
+                    class="repair-history-card completed">
+
+
+                    <div class="repair-history-appliance">
+
+                        <div class="repair-history-appliance-icon">
+
+                            <i class="fa-solid fa-shirt"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                WASHING MACHINE
+                            </span>
+
+                            <h4>
+                                Drum & Motor Repair
+                            </h4>
+
+                            <small>
+                                Request ID: #FC-1021
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="repair-history-info">
+
+                        <div>
+
+                            <span>
+                                SERVICE DATE
+                            </span>
+
+                            <strong>
+                                02 Aug 2026
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                TECHNICIAN
+                            </span>
+
+                            <strong>
+                                Rahul Sharma
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                AMOUNT
+                            </span>
+
+                            <strong>
+                                ₹950
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="repair-history-status">
+
+                        <span class="repair-status completed">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Completed
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="repair-details.html"
+                        class="repair-history-view">
+
+                        View Details
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                </article>
+
+
+
+                <!-- =================================================
+                     REPAIR ITEM 3
+                ================================================== -->
+
+                <article
+                    class="repair-history-card completed">
+
+
+                    <div class="repair-history-appliance">
+
+                        <div class="repair-history-appliance-icon">
+
+                            <i class="fa-solid fa-tv"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                TELEVISION
+                            </span>
+
+                            <h4>
+                                Display Panel Repair
+                            </h4>
+
+                            <small>
+                                Request ID: #FC-0987
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="repair-history-info">
+
+                        <div>
+
+                            <span>
+                                SERVICE DATE
+                            </span>
+
+                            <strong>
+                                21 Jul 2026
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                TECHNICIAN
+                            </span>
+
+                            <strong>
+                                Vijay Kumar
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                AMOUNT
+                            </span>
+
+                            <strong>
+                                ₹2,400
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="repair-history-status">
+
+                        <span class="repair-status completed">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Completed
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="repair-details.html"
+                        class="repair-history-view">
+
+                        View Details
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                </article>
+
+
+
+                <!-- =================================================
+                     REPAIR ITEM 4
+                ================================================== -->
+
+                <article
+                    class="repair-history-card cancelled">
+
+
+                    <div class="repair-history-appliance">
+
+                        <div class="repair-history-appliance-icon">
+
+                            <i class="fas fa-fire-burner"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                MICROWAVE
+                            </span>
+
+                            <h4>
+                                Heating Issue
+                            </h4>
+
+                            <small>
+                                Request ID: #FC-0945
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="repair-history-info">
+
+                        <div>
+
+                            <span>
+                                SERVICE DATE
+                            </span>
+
+                            <strong>
+                                10 Jul 2026
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                TECHNICIAN
+                            </span>
+
+                            <strong>
+                                Not Assigned
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                AMOUNT
+                            </span>
+
+                            <strong>
+                                ₹0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="repair-history-status">
+
+                        <span class="repair-status cancelled">
+                            <i class="fa-solid fa-circle-xmark"></i>
+                            Cancelled
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="repair-details.html"
+                        class="repair-history-view">
+
+                        View Details
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+    <!-- =========================================================
+     REPAIR HISTORY
+     REPAIR STATISTICS SECTION
+     PART 1 - HTML ONLY
+========================================================= -->
+
+<section class="repair-statistics-section">
+
+    <div class="repair-statistics-container">
+
+
+        <!-- =================================================
+             SECTION HEADER
+        ================================================== -->
+
+        <div class="repair-statistics-header">
+
+            <div>
+
+                <span class="repair-statistics-label">
+                    SERVICE OVERVIEW
+                </span>
+
+                <h3>
+                    Repair Statistics
+                </h3>
+
+                <p>
+                    Get a quick overview of your repair activity
+                    and appliance service history.
+                </p>
+
+            </div>
+
+
+            <!-- Period -->
+
+            <div class="repair-statistics-period">
+
+                <label for="repair-statistics-period">
+                    Period
+                </label>
+
+                <select id="repair-statistics-period">
+
+                    <option value="6-months">
+                        Last 6 Months
+                    </option>
+
+                    <option value="12-months">
+                        Last 12 Months
+                    </option>
+
+                    <option value="all">
+                        All Time
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             STATISTICS GRID
+        ================================================== -->
+
+        <div class="repair-statistics-grid">
+
+
+            <!-- =================================================
+                 REPAIR ACTIVITY
+            ================================================== -->
+
+            <div class="repair-statistics-card repair-activity-card">
+
+
+                <div class="repair-statistics-card-header">
+
+                    <div>
+
+                        <span>
+                            REPAIR ACTIVITY
+                        </span>
+
+                        <h4>
+                            Service Requests
+                        </h4>
+
+                    </div>
+
+                    <div class="repair-statistics-card-icon">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Activity Summary -->
+
+                <div class="repair-activity-summary">
+
+                    <strong>
+                        12
+                    </strong>
+
+                    <span>
+                        Total Requests
+                    </span>
+
+                </div>
+
+
+
+                <!-- Simple Chart -->
+
+                <div class="repair-activity-chart">
+
+
+                    <div class="repair-chart-y-axis">
+
+                        <span>
+                            12
+                        </span>
+
+                        <span>
+                            8
+                        </span>
+
+                        <span>
+                            4
+                        </span>
+
+                        <span>
+                            0
+                        </span>
+
+                    </div>
+
+
+                    <div class="repair-chart-area">
+
+
+                        <div class="repair-chart-grid-line line-one"></div>
+
+                        <div class="repair-chart-grid-line line-two"></div>
+
+                        <div class="repair-chart-grid-line line-three"></div>
+
+
+                        <div class="repair-chart-bars">
+
+
+                            <div class="repair-chart-column">
+
+                                <div
+                                    class="repair-chart-bar"
+                                    style="height: 42%;">
+
+                                </div>
+
+                                <span>
+                                    Mar
+                                </span>
+
+                            </div>
+
+
+                            <div class="repair-chart-column">
+
+                                <div
+                                    class="repair-chart-bar"
+                                    style="height: 62%;">
+
+                                </div>
+
+                                <span>
+                                    Apr
+                                </span>
+
+                            </div>
+
+
+                            <div class="repair-chart-column">
+
+                                <div
+                                    class="repair-chart-bar"
+                                    style="height: 35%;">
+
+                                </div>
+
+                                <span>
+                                    May
+                                </span>
+
+                            </div>
+
+
+                            <div class="repair-chart-column">
+
+                                <div
+                                    class="repair-chart-bar"
+                                    style="height: 78%;">
+
+                                </div>
+
+                                <span>
+                                    Jun
+                                </span>
+
+                            </div>
+
+
+                            <div class="repair-chart-column">
+
+                                <div
+                                    class="repair-chart-bar"
+                                    style="height: 55%;">
+
+                                </div>
+
+                                <span>
+                                    Jul
+                                </span>
+
+                            </div>
+
+
+                            <div class="repair-chart-column">
+
+                                <div
+                                    class="repair-chart-bar active"
+                                    style="height: 90%;">
+
+                                </div>
+
+                                <span>
+                                    Aug
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 APPLIANCE SERVICE SUMMARY
+            ================================================== -->
+
+            <div class="repair-statistics-card appliance-summary-card">
+
+
+                <div class="repair-statistics-card-header">
+
+                    <div>
+
+                        <span>
+                            APPLIANCE SUMMARY
+                        </span>
+
+                        <h4>
+                            Service by Appliance
+                        </h4>
+
+                    </div>
+
+                    <div class="repair-statistics-card-icon">
+
+                        <i class="fa-solid fa-house"></i>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Appliance List -->
+
+                <div class="appliance-summary-list">
+
+
+                    <!-- Air Conditioner -->
+
+                    <div class="appliance-summary-item">
+
+                        <div class="appliance-summary-item-left">
+
+                            <div class="appliance-summary-icon">
+
+                                <i class="fa-solid fa-snowflake"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Air Conditioner
+                                </strong>
+
+                                <span>
+                                    5 services
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <strong class="appliance-summary-count">
+                            5
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- Washing Machine -->
+
+                    <div class="appliance-summary-item">
+
+                        <div class="appliance-summary-item-left">
+
+                            <div class="appliance-summary-icon">
+
+                                <i class="fa-solid fa-shirt"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Washing Machine
+                                </strong>
+
+                                <span>
+                                    3 services
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <strong class="appliance-summary-count">
+                            3
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- Television -->
+
+                    <div class="appliance-summary-item">
+
+                        <div class="appliance-summary-item-left">
+
+                            <div class="appliance-summary-icon">
+
+                                <i class="fa-solid fa-tv"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Television
+                                </strong>
+
+                                <span>
+                                    2 services
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <strong class="appliance-summary-count">
+                            2
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- Microwave -->
+
+                    <div class="appliance-summary-item">
+
+                        <div class="appliance-summary-item-left">
+
+                            <div class="appliance-summary-icon">
+
+                                <i class="fa-solid fa-fire-burner"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Microwave
+                                </strong>
+
+                                <span>
+                                    2 services
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <strong class="appliance-summary-count">
+                            2
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             SERVICE SPENDING
+        ================================================== -->
+
+        <div class="repair-spending-card">
+
+
+            <div class="repair-spending-info">
+
+                <div class="repair-spending-icon">
+
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        TOTAL SERVICE SPENDING
+                    </span>
+
+                    <strong>
+                        ₹8,450
+                    </strong>
+
+                    <p>
+                        Total amount spent on repair services
+                        during the selected period.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="repair-spending-details">
+
+
+                <div>
+
+                    <span>
+                        MOST SERVICED
+                    </span>
+
+                    <strong>
+                        Air Conditioner
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        COMPLETION RATE
+                    </span>
+
+                    <strong>
+                        83%
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        AVERAGE SERVICE COST
+                    </span>
+
+                    <strong>
+                        ₹704
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+
+  </main>
+
+</div>
+ <!-- JS -->
+<!-- =========================================================
+     LOGOUT CONFIRMATION POPUP
+========================================================= -->
+
+<div class="logout-modal-overlay" id="logoutModal">
+
+    <div class="logout-modal">
+
+        <!-- Icon -->
+        <div class="logout-modal-icon">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+
+        <!-- Message -->
+        <h2>
+            Are you sure you want to<br>
+            logout?
+        </h2>
+
+        <!-- Buttons -->
+        <div class="logout-modal-actions">
+
+            <button
+                type="button"
+                class="logout-confirm-btn"
+                id="logoutConfirm">
+                Yes
+            </button>
+
+            <button
+                type="button"
+                class="logout-cancel-btn"
+                id="logoutCancel">
+                No
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+  <script src="js/dash.js"></script>
+
+</body>
+</html>
