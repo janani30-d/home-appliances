@@ -14707,7 +14707,16 @@ body.dark-mode .booking-submit-button {
 body.dark-mode .booking-submit-button:hover {
     background: #1d4ed8;
 }
+/* =========================================================
+   BOOKING PAGE - CALENDAR ICON WHITE IN DARK MODE
+========================================================= */
 
+body.dark-mode input[type="date"]::-webkit-calendar-picker-indicator,
+html.dark-mode input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 1;
+    cursor: pointer;
+}
 
 
 

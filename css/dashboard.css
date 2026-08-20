@@ -4689,7 +4689,15 @@ body.dark-mode .repair-request-help-icon {
 
     color: #34d399;
 }
+/* =========================================================
+   DARK MODE - DATE INPUT CALENDAR ICON
+========================================================= */
 
+body.dark-mode input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 1;
+    cursor: pointer;
+}
 
 
 
