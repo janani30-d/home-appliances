@@ -120,7 +120,7 @@ ul {
 
     border-bottom: 1px solid var(--border-color);
 
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
 
@@ -19132,4 +19132,89 @@ textarea {
     display: block;
 
     border: 0 !important;
+}
+
+
+
+
+
+
+/* =========================================================
+   FINAL FONT SIZE OVERRIDE - FAQ & FOOTER
+   Match the rest of the FixCare website
+========================================================= */
+
+/* ================= FAQ ================= */
+
+.faq-question {
+    font-family: "Poppins", sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    line-height: 1.5 !important;
+}
+
+.faq-question i {
+    font-size: 14px !important;
+}
+
+.faq-answer p {
+    font-family: "Poppins", sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 1.7 !important;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer-column h3 {
+    font-family: "Poppins", sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+}
+
+.footer-about p,
+.footer-links li a,
+.footer-contact li,
+.footer-contact li a {
+    font-family: "Poppins", sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    line-height: 1.7 !important;
+}
+
+.footer-bottom p,
+.footer-bottom-links a {
+    font-family: "Poppins", sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    line-height: 1.6 !important;
+}
+
+
+
+/* =========================================================
+   ABOUT TRUST CARDS - FONT SIZE OVERRIDE
+   DESKTOP ONLY
+========================================================= */
+
+.about-trust-card .trust-number {
+    font-size: 10px !important;
+}
+
+.about-trust-card .trust-icon {
+    font-size: 15px !important;
+}
+
+.about-trust-card .trust-content h3 {
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+}
+
+.about-trust-card .trust-content p {
+    font-size: 13px !important;
+    line-height: 1.7 !important;
+    font-weight: 400 !important;
 }

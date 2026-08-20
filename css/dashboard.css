@@ -40,7 +40,15 @@ body {
     padding: 0;
     min-height: 100%;
 }
+/* =========================================
+   GLOBAL BOX SIZING
+========================================= */
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 
 /* =========================================================
@@ -232,24 +240,20 @@ body {
 
 
 .customer-logout {
-    min-height: 50px;
+   min-height: 50px;
 
     display: flex;
-
     align-items: center;
 
     gap: 14px;
-
     padding: 0 18px;
 
     border-radius: 12px;
 
-    background: rgba(37, 99, 235, 0.95);
-
+    background: #ef4444;
     color: #ffffff;
 
     font-size: 14px;
-
     font-weight: 600;
 
     text-decoration: none;
@@ -270,8 +274,7 @@ body {
 
 
 .customer-logout:hover {
-    background: var(--dashboard-primary-dark);
-
+   background: #dc2626;
     transform: translateY(-2px);
 }
 
@@ -319,7 +322,9 @@ body {
 
     padding: 25px 28px 60px;
 
-    overflow: hidden;
+    overflow: visible;
+
+    
 
     transition:
         margin 0.35s ease,
@@ -334,9 +339,15 @@ body {
 .customer-dashboard-header {
     width: 100%;
 
+    position: sticky;
+    top: 25px;
+    z-index: 1000;
+
     min-height: 88px;
 
     display: flex;
+
+    
 
     align-items: center;
 
