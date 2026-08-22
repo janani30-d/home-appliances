@@ -19010,3 +19010,116 @@ body.rtl .registerform-footer {
         margin-bottom: 18px;
     }
 }
+
+
+
+
+
+/* =========================================
+   HOME 1 + HOME 2
+   IPAD MINI - FIX HERO TOP HIDING
+========================================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* =========================
+       HOME 1
+    ========================= */
+
+    .hero-section {
+        padding-top: 0 !important;
+    }
+
+    .hero-container {
+        padding-top: 70px !important;
+        padding-bottom: 70px !important;
+    }
+
+    .hero-content {
+        padding-top: 0 !important;
+        position: relative !important;
+        top: 35px !important;
+    }
+
+
+    /* =========================
+       HOME 2
+    ========================= */
+
+    .home2-hero-section {
+        padding-top: 90px !important;
+        padding-bottom: 90px !important;
+    }
+
+    .home2-hero-content {
+        padding-top: 0 !important;
+        position: relative !important;
+        top: 35px !important;
+    }
+
+}
+
+
+
+
+/* =========================================
+   DARK MODE - REMOVE WHITE SPACE
+========================================= */
+
+body.dark-mode {
+    background: #0f172a !important;
+}
+
+/* All main page areas */
+body.dark-mode main,
+body.dark-mode section {
+    background-color: transparent;
+}
+
+/* Empty space between sections */
+body.dark-mode .cta-section,
+body.dark-mode .cta,
+body.dark-mode .footer-section {
+    background-color: #0f172a !important;
+}
+
+/* Prevent empty wrappers from showing white */
+body.dark-mode .page-wrapper,
+body.dark-mode .main-content,
+body.dark-mode .content-wrapper {
+    background-color: #0f172a !important;
+}
+
+
+
+
+
+/* =========================================
+   MOBILE DASHBOARD HEADER - FINAL
+========================================= */
+
+@media (max-width: 600px) {
+
+    .customer-header-title {
+        min-width: 0 !important;
+        flex: 1 !important;
+        overflow: hidden !important;
+    }
+
+    .customer-header-title span {
+        display: none !important;
+    }
+
+    .customer-header-title h1 {
+        font-size: 14px !important;
+        line-height: 1.2 !important;
+        font-weight: 600 !important;
+
+        max-width: 100px !important;
+        overflow: hidden !important;
+        white-space: nowrap !important;
+        text-overflow: ellipsis !important;
+
+        margin: 0 !important;
+    }
+}

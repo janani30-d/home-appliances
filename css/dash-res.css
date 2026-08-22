@@ -13332,3 +13332,32 @@ body.logout-open {
     }
 
 }
+
+
+
+
+
+/* =========================================
+   MOBILE DASHBOARD TITLE - SMALL FONT
+========================================= */
+
+@media (max-width: 600px) {
+
+    .customer-header-title h1 {
+        font-size: 13px !important;
+        line-height: 1.2 !important;
+        font-weight: 600 !important;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .customer-header-title h1 {
+        font-size: 12px !important;
+    }
+
+}
+
+
+

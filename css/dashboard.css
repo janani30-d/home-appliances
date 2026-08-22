@@ -13250,3 +13250,290 @@ body .customer-quick-action-content p {
 .support-submit-btn {
     font-size: 13px !important;
 }
+
+
+
+
+
+/* =========================================================
+   DASHBOARD - UNIFORM FONT WITHOUT AFFECTING ICONS
+========================================================= */
+
+.customer-dashboard,
+.customer-sidebar,
+.customer-dashboard-main,
+.customer-dashboard-header {
+    font-family: "Poppins", sans-serif !important;
+}
+
+
+/* Dashboard text elements */
+.customer-dashboard h1,
+.customer-dashboard h2,
+.customer-dashboard h3,
+.customer-dashboard h4,
+.customer-dashboard h5,
+.customer-dashboard h6,
+.customer-dashboard p,
+.customer-dashboard span,
+.customer-dashboard a,
+.customer-dashboard label,
+.customer-dashboard li,
+.customer-dashboard button,
+.customer-dashboard input,
+.customer-dashboard select,
+.customer-dashboard textarea {
+    font-family: "Poppins", sans-serif !important;
+}
+
+
+/* Keep Font Awesome icons working */
+.customer-dashboard i[class^="fa-"],
+.customer-dashboard i[class*=" fa-"],
+.customer-sidebar i[class^="fa-"],
+.customer-sidebar i[class*=" fa-"] {
+    font-family: "Font Awesome 6 Free" !important;
+}
+
+
+/* =========================================================
+   DASHBOARD - FINAL FONT SIZE
+========================================================= */
+
+/* Header */
+body .customer-header-title span {
+    font-size: 13px !important;
+}
+
+body .customer-header-title h1 {
+    font-size: 28px !important;
+}
+
+body .customer-nav-link {
+    font-size: 14px !important;
+}
+
+body .customer-logout {
+    font-size: 14px !important;
+}
+
+body .customer-profile-info strong {
+    font-size: 14px !important;
+}
+
+body .customer-profile-info span {
+    font-size: 12px !important;
+}
+
+
+/* ================= HERO ================= */
+
+body .customer-hero-label {
+    font-size: 12px !important;
+}
+
+body .customer-hero-content h2 {
+    font-size: 36px !important;
+}
+
+body .customer-hero-content p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+}
+
+body .customer-hero-primary,
+body .customer-hero-secondary {
+    font-size: 13px !important;
+}
+
+
+/* Hero status */
+body .customer-hero-status span {
+    font-size: 12px !important;
+}
+
+body .customer-hero-status strong {
+    font-size: 14px !important;
+}
+
+
+/* ================= SERVICE OVERVIEW ================= */
+
+body .customer-overview-heading h2 {
+    font-size: 28px !important;
+}
+
+body .customer-overview-heading p {
+    font-size: 14px !important;
+}
+
+body .customer-view-link {
+    font-size: 13px !important;
+}
+
+
+/* ================= SERVICE CARDS ================= */
+
+body .customer-service-card-status {
+    font-size: 12px !important;
+}
+
+body .customer-service-card-content > span {
+    font-size: 13px !important;
+}
+
+body .customer-service-card-content h3 {
+    font-size: 20px !important;
+}
+
+body .customer-service-card-content p {
+    font-size: 14px !important;
+}
+
+body .customer-service-card-link {
+    font-size: 13px !important;
+}
+
+
+/* ================= CURRENT REPAIR ================= */
+
+body .customer-current-repair-header .customer-section-label {
+    font-size: 12px !important;
+}
+
+body .customer-current-repair-header h2 {
+    font-size: 28px !important;
+}
+
+body .customer-current-repair-header p {
+    font-size: 14px !important;
+}
+
+body .customer-track-link {
+    font-size: 13px !important;
+}
+
+
+/* ================= REPAIR TITLE ================= */
+
+body .customer-repair-title > div:last-child {
+    font-size: 12px !important;
+}
+
+body .customer-repair-title h3 {
+    font-size: 22px !important;
+}
+
+body .customer-repair-title p {
+    font-size: 14px !important;
+}
+
+
+/* ================= TECHNICIAN ================= */
+
+body .customer-technician-content span {
+    font-size: 12px !important;
+}
+
+body .customer-technician-content strong {
+    font-size: 16px !important;
+}
+
+body .customer-technician-content small {
+    font-size: 12px !important;
+}
+
+
+/* ================= PROGRESS ================= */
+
+body .customer-progress-heading span,
+body .customer-progress-heading strong {
+    font-size: 14px !important;
+}
+
+body .customer-progress-step span {
+    font-size: 11px !important;
+}
+
+
+/* ================= ARRIVAL ================= */
+
+body .customer-arrival-info span {
+    font-size: 12px !important;
+}
+
+
+/* =========================================
+   DASHBOARD - HEADING FONT WEIGHT
+========================================= */
+
+.customer-dashboard h1,
+.customer-dashboard h2,
+.customer-dashboard h3,
+.customer-dashboard h4,
+.customer-dashboard h5,
+.customer-dashboard h6,
+.customer-dashboard-title,
+.customer-section-title,
+.customer-header-title h1,
+.customer-hero-content h2,
+.customer-overview-heading h2,
+.customer-current-repair-header h2,
+.customer-service-card-content h3,
+.customer-repair-title h3,
+.customer-technician-content strong,
+.customer-progress-heading strong {
+    font-weight: 600 !important;
+}
+
+
+
+
+
+
+/* Quick Action card heading */
+.customer-quick-action-content h3 {
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+}
+
+/* Quick Action card description */
+.customer-quick-action-content p {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+}
+
+
+
+
+
+/* =========================================
+   QUICK ACTIONS - FORCE FINAL FONT SIZE
+========================================= */
+
+section.customer-quick-actions
+.customer-quick-actions-header h2 {
+    font-size: 22px !important;
+    line-height: 1.25 !important;
+    font-weight: 600 !important;
+}
+
+section.customer-quick-actions
+.customer-quick-actions-header p {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+}
+
+section.customer-quick-actions
+.customer-quick-action-content h3 {
+    font-size: 16px !important;
+    line-height: 1.35 !important;
+    font-weight: 600 !important;
+}
+
+section.customer-quick-actions
+.customer-quick-action-content p {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+}
