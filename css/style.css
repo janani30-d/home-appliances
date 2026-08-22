@@ -19218,3 +19218,107 @@ textarea {
     line-height: 1.7 !important;
     font-weight: 400 !important;
 }
+
+
+
+
+
+/* =========================================
+   HOME 1 & HOME 2
+   HERO TOP GAP / FIX FIXED HEADER
+========================================= */
+
+/* ---------- DESKTOP ---------- */
+
+.hero-section {
+    padding-top: 35px !important;
+}
+
+.home2-hero-section {
+    padding-top: 35px !important;
+}
+
+
+/* ---------- TABLET / iPAD ---------- */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .hero-section {
+        padding-top: 120px !important;
+    }
+
+    .home2-hero-section {
+        padding-top: 120px !important;
+    }
+
+    .hero-content {
+        padding-top: 10px !important;
+    }
+
+    .home2-hero-content {
+        padding-top: 10px !important;
+    }
+
+    .hero-subtitle,
+    .home2-hero-subtitle {
+        margin-top: 0 !important;
+    }
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 767px) {
+
+    .hero-section {
+        padding-top: 85px !important;
+    }
+
+    .home2-hero-section {
+        padding-top: 85px !important;
+    }
+
+    .hero-container {
+        padding-top: 25px !important;
+    }
+
+    .home2-hero-container {
+        padding-top: 25px !important;
+    }
+
+    .hero-content {
+        padding-top: 10px !important;
+    }
+
+    .home2-hero-content {
+        padding-top: 10px !important;
+    }
+
+    .hero-subtitle,
+    .home2-hero-subtitle {
+        margin-top: 0 !important;
+        margin-bottom: 15px !important;
+    }
+}
+
+
+/* ---------- SMALL MOBILE ---------- */
+
+@media (max-width: 480px) {
+
+    .hero-section {
+        padding-top: 75px !important;
+    }
+
+    .home2-hero-section {
+        padding-top: 75px !important;
+    }
+
+    .hero-container {
+        padding-top: 20px !important;
+    }
+
+    .home2-hero-container {
+        padding-top: 20px !important;
+    }
+}
